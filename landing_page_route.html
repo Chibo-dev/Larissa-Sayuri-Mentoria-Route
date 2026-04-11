@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoria ROUTE — Larissa Sayuri</title>
+<meta name="description" content="Mentoria individual de desenvolvimento pessoal e carreira. Your route to the life you want.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1120;
+    --midnight: #060C18;
+    --off-white: #F2EDE6;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: rgba(201,168,76,0.12);
+    --blue: #1A7FD4;
+    --blue-dim: rgba(26,127,212,0.10);
+    --slate: #8A8F99;
+    --border: rgba(201,168,76,0.15);
+    --border-subtle: rgba(255,255,255,0.05);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--midnight);
+    color: var(--off-white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(6,12,24,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--off-white);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .nav-logo span { color: var(--gold); font-style: italic; }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--midnight);
+  }
+
+  /* ── SECTIONS ── */
+  section { position: relative; }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--midnight);
+    padding: 120px 0 80px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--blue) 60%, transparent 100%);
+  }
+
+  .hero-glow-1 {
+    position: absolute;
+    top: 20%; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,127,212,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-glow-2 {
+    position: absolute;
+    bottom: 10%; left: 30%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 300;
+    line-height: 1.0;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--off-white);
+    opacity: 0;
+    margin: 28px 0 16px;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    color: var(--slate);
+    max-width: 520px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.7s forwards;
+    margin-bottom: 40px;
+  }
+
+  .hero-creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .cred-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--midnight);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.9s forwards;
+  }
+
+  .hero-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--slate);
+    opacity: 0.4;
+  }
+
+  .hero-scroll::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--slate);
+  }
+
+  /* ── PROBLEMA ── */
+  .problema {
+    background: var(--navy);
+    padding: 100px 0;
+  }
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    max-width: 60px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .problema-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .problema-item {
+    background: var(--midnight);
+    border: 1px solid var(--border-subtle);
+    border-left: 2px solid var(--blue);
+    padding: 24px 28px;
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.7;
+    transition: border-color 0.3s ease;
+  }
+
+  .problema-item:hover {
+    border-left-color: var(--gold);
+  }
+
+  .problema-verdict {
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+  }
+
+  .problema-verdict p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .problema-verdict em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .problema-verdict .en {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--slate);
+    margin-top: 12px;
+    opacity: 0.6;
+  }
+
+  /* ── MÉTODO ── */
+  .metodo {
+    background: var(--midnight);
+    padding: 100px 0;
+  }
+
+  .metodo::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  }
+
+  .route-letters {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .route-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0;
+    align-items: stretch;
+    transition: transform 0.2s ease;
+  }
+
+  .route-row:hover {
+    transform: translateX(4px);
+  }
+
+  .route-letter-box {
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: white;
+    padding: 24px 0;
+    flex-shrink: 0;
+  }
+
+  .route-content {
+    background: var(--navy);
+    border: 1px solid var(--border-subtle);
+    border-left: none;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .route-word {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .route-desc {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* ── SESSÕES ── */
+  .sessoes {
+    background: var(--navy);
+    padding: 100px 0;
+  }
+
+  .sessoes-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: end;
+  }
+
+  .sessoes-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--off-white);
+  }
+
+  .stat-number span { color: var(--gold); }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--slate);
+    letter-spacing: 1px;
+  }
+
+  .sessoes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sessao-item {
+    display: grid;
+    grid-template-columns: 40px 120px 1fr 100px;
+    align-items: center;
+    gap: 0;
+    background: var(--midnight);
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+    transition: background 0.2s ease;
+  }
+
+  .sessao-item:hover { background: rgba(26,127,212,0.04); }
+
+  .sessao-letter {
+    background: var(--blue);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: white;
+    padding: 20px 0;
+    min-height: 64px;
+  }
+
+  .sessao-letter.gold-bg { background: var(--gold); color: var(--midnight); }
+
+  .sessao-name {
+    padding: 0 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .sessao-desc {
+    padding: 16px 20px;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.6;
+    border-left: 1px solid var(--border-subtle);
+  }
+
+  .sessao-timing {
+    padding: 0 20px;
+    font-size: 10px;
+    color: var(--slate);
+    text-align: right;
+    opacity: 0.6;
+  }
+
+  /* ── QUEM SOU ── */
+  .quem {
+    background: var(--midnight);
+    padding: 100px 0;
+  }
+
+  .quem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .quem-photo {
+    position: relative;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--navy);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-placeholder::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--blue));
+  }
+
+  .photo-placeholder p {
+    font-size: 10px;
+    color: var(--slate);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  .photo-placeholder .photo-icon {
+    font-size: 32px;
+    opacity: 0.15;
+  }
+
+  .quem-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .quem-content h2 em {
+    font-style: italic;
+    color: var(--gold);
+    display: block;
+  }
+
+  .quem-creds {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .quem-cred {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+
+  .quem-cred::before {
+    content: '';
+    width: 16px;
+    height: 1px;
+    background: var(--blue);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  .quem-story {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    opacity: 0.7;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  /* ── PARA QUEM ── */
+  .para-quem {
+    background: var(--navy);
+    padding: 100px 0;
+  }
+
+  .para-quem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .pq-card {
+    background: var(--midnight);
+    border: 1px solid var(--border-subtle);
+    padding: 40px;
+  }
+
+  .pq-card.sim { border-top: 2px solid var(--gold); }
+  .pq-card.nao { border-top: 2px solid var(--slate); }
+
+  .pq-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  .pq-card.sim h3 em { color: var(--gold); font-style: italic; }
+  .pq-card.nao h3 { color: var(--slate); opacity: 0.7; }
+
+  .pq-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pq-list li {
+    font-size: 12px;
+    color: var(--slate);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .pq-card.sim .pq-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  .pq-card.nao .pq-list li::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--slate);
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  /* ── DEPOIMENTOS ── */
+  .depoimentos {
+    background: var(--midnight);
+    padding: 100px 0;
+  }
+
+  .dep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .dep-card {
+    background: var(--navy);
+    border: 1px solid var(--border-subtle);
+    padding: 36px;
+    position: relative;
+  }
+
+  .dep-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+  }
+
+  .dep-card:nth-child(1)::before { background: var(--gold); }
+  .dep-card:nth-child(2)::before { background: var(--blue); }
+
+  .dep-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .dep-author {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    opacity: 0.5;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: var(--navy);
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-final::before {
+    content: 'ROUTE';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 200px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.03);
+    letter-spacing: 30px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .cta-final .section-label {
+    justify-content: center;
+  }
+
+  .cta-final .section-label::after { display: none; }
+
+  .cta-final h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .cta-final h2 em {
+    font-style: italic;
+    color: var(--gold);
+    display: block;
+  }
+
+  .cta-final .cta-sub {
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 48px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+
+  .cta-btn-large {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--midnight);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 56px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .cta-btn-large:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(201,168,76,0.15);
+  }
+
+  .cta-note {
+    font-size: 10px;
+    color: var(--slate);
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--midnight);
+    border-top: 1px solid var(--border-subtle);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--off-white);
+    opacity: 0.5;
+  }
+
+  .footer-logo span { color: var(--gold); font-style: italic; }
+
+  .footer-right {
+    font-size: 10px;
+    color: var(--slate);
+    opacity: 0.4;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .container { padding: 0 24px; }
+    .hero { padding: 100px 0 60px; }
+    .problema-grid { grid-template-columns: 1fr; }
+    .sessoes-intro { grid-template-columns: 1fr; gap: 24px; }
+    .sessao-item { grid-template-columns: 40px 1fr; }
+    .sessao-name, .sessao-timing { display: none; }
+    .quem-grid { grid-template-columns: 1fr; }
+    .para-quem-grid { grid-template-columns: 1fr; }
+    .dep-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-right { text-align: center; }
+    .cta-final::before { font-size: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Larissa <span>Sayuri</span></a>
+  <a href="#formulario" class="nav-cta">Quero minha ROUTE</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-eyebrow">Mentoria Individual · Desenvolvimento Pessoal & Carreira</div>
+    <h1>
+      Mentoria
+      <em>ROUTE.</em>
+    </h1>
+    <p class="hero-tagline">"Your route to the life you want."</p>
+    <p class="hero-sub">Desenvolvimento pessoal não é o oposto da alta performance — é a base dela. A Mentoria ROUTE alinha quem você é, onde quer chegar e o que você faz todos os dias.</p>
+    <div class="hero-creds">
+      <div class="cred-badge">⚡ Engenheira Eletricista · PMP · MBA USP</div>
+      <div class="cred-badge">🏆 Guinness World Record Holder</div>
+      <div class="cred-badge">🌎 Brasileira nos EUA · PT & EN</div>
+    </div>
+    <a href="#formulario" class="hero-btn">Quero minha ROUTE →</a>
+  </div>
+  <div class="hero-scroll">scroll</div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="container">
+    <div class="section-label">O problema</div>
+    <h2 class="section-title">
+      O problema não é<br>
+      falta de esforço.<br>
+      <em>É falta de direção.</em>
+    </h2>
+    <div class="problema-grid">
+      <div class="problema-item">Você acorda cedo, trabalha muito e faz tudo que "deveria" fazer — mas ainda sente que está correndo em círculos.</div>
+      <div class="problema-item">Quer crescer na carreira mas sente que vida pessoal e profissional estão sempre em conflito.</div>
+      <div class="problema-item">Planeja muito, executa pouco. O perfeccionismo paralisa mais do que impulsiona.</div>
+      <div class="problema-item">Está ocupada o tempo todo — mas ocupada não é o mesmo que avançando.</div>
+    </div>
+    <div class="problema-verdict">
+      <p>
+        Isso não é preguiça. Não é falta de capacidade.<br>
+        <em>É falta de clareza. É falta de rota.</em>
+        <span class="en">"Not lost. Just without direction. Yet."</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="metodo">
+  <div class="container">
+    <div class="section-label">O método</div>
+    <h2 class="section-title">
+      Um método construído<br>
+      <em>para a sua vida real.</em>
+    </h2>
+    <p style="font-size: 13px; color: var(--slate); max-width: 560px; line-height: 1.8; margin-bottom: 8px;">Não é fórmula pronta. Não é improviso. O método ROUTE foi criado para te tirar da confusão e colocar em clareza, direção e execução — sem abrir mão de quem você é.</p>
+    <div class="route-letters">
+      <div class="route-row">
+        <div class="route-letter-box">R</div>
+        <div class="route-content">
+          <div class="route-word">Reflection</div>
+          <div class="route-desc">Autoconhecimento profundo. Quem você é, o que te move, o que te trava. O ponto de partida de tudo.</div>
+        </div>
+      </div>
+      <div class="route-row">
+        <div class="route-letter-box">O</div>
+        <div class="route-content">
+          <div class="route-word">Orientation</div>
+          <div class="route-desc">Para onde você quer ir. Objetivos pessoais e profissionais. Sonhos transformados em metas reais.</div>
+        </div>
+      </div>
+      <div class="route-row">
+        <div class="route-letter-box">U</div>
+        <div class="route-content">
+          <div class="route-word">Understanding</div>
+          <div class="route-desc">O que está entre você e onde quer chegar. Rotina, padrões, sabotadores. Clareza total.</div>
+        </div>
+      </div>
+      <div class="route-row">
+        <div class="route-letter-box">T</div>
+        <div class="route-content">
+          <div class="route-word">Trajectory</div>
+          <div class="route-desc">Construindo o plano. Mini hábitos, gestão de tempo, performance track. Da confusão à direção concreta.</div>
+        </div>
+      </div>
+      <div class="route-row">
+        <div class="route-letter-box">E</div>
+        <div class="route-content">
+          <div class="route-word">Execution</div>
+          <div class="route-desc">Colocando em prática. Checklist, revisão, consolidação. Fazer acontecer — dia após dia.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÕES -->
+<section class="sessoes">
+  <div class="container">
+    <div class="section-label">Como funciona</div>
+    <div class="sessoes-intro">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 0;">
+          6 encontros.<br>
+          <em>3 meses de jornada.</em>
+        </h2>
+      </div>
+      <div style="display: flex; gap: 40px;">
+        <div class="sessoes-stat">
+          <div class="stat-number">6<span>×</span></div>
+          <div class="stat-label">Sessões individuais</div>
+        </div>
+        <div class="sessoes-stat">
+          <div class="stat-number">3<span>m</span></div>
+          <div class="stat-label">Meses de processo</div>
+        </div>
+      </div>
+    </div>
+    <div class="sessoes-grid">
+      <div class="sessao-item">
+        <div class="sessao-letter">R</div>
+        <div class="sessao-name">Reflection</div>
+        <div class="sessao-desc">Diagnóstico inicial. Autoconhecimento, valores, objetivos pessoais e profissionais.</div>
+        <div class="sessao-timing">Semana 1</div>
+      </div>
+      <div class="sessao-item">
+        <div class="sessao-letter">O</div>
+        <div class="sessao-name">Orientation</div>
+        <div class="sessao-desc">Para onde você quer ir. Metas SMART, lista dos sonhos vs. realidade.</div>
+        <div class="sessao-timing">Semana 2</div>
+      </div>
+      <div class="sessao-item">
+        <div class="sessao-letter">U</div>
+        <div class="sessao-name">Understanding</div>
+        <div class="sessao-desc">Rotina atual vs. ideal. Pilares da vida. O que te aproxima ou afasta dos objetivos.</div>
+        <div class="sessao-timing">Semana 4</div>
+      </div>
+      <div class="sessao-item">
+        <div class="sessao-letter">T</div>
+        <div class="sessao-name">Trajectory</div>
+        <div class="sessao-desc">Construção do plano. Mini hábitos, gestão de tempo e performance track.</div>
+        <div class="sessao-timing">Semana 6</div>
+      </div>
+      <div class="sessao-item">
+        <div class="sessao-letter">E</div>
+        <div class="sessao-name">Execution</div>
+        <div class="sessao-desc">Revisão, ajustes e consolidação. Checklist tracker e plano de continuidade.</div>
+        <div class="sessao-timing">Semana 8</div>
+      </div>
+      <div class="sessao-item">
+        <div class="sessao-letter gold-bg">★</div>
+        <div class="sessao-name" style="color: var(--gold);">Follow-up</div>
+        <div class="sessao-desc">Sessão bônus 30 dias depois. Revisão das conquistas e próximos passos.</div>
+        <div class="sessao-timing">Semana 12</div>
+      </div>
+    </div>
+    <p style="font-size: 10px; color: var(--slate); opacity: 0.5; margin-top: 16px; font-style: italic;">* Cada sessão inclui atividades práticas para aplicar na vida real entre os encontros. Sessões em PT ou EN.</p>
+  </div>
+</section>
+
+<!-- QUEM SOU -->
+<section class="quem">
+  <div class="container">
+    <div class="quem-grid">
+      <div class="quem-photo">
+        <div class="photo-placeholder">
+          <div class="photo-icon">📸</div>
+          <p>Sua foto aqui</p>
+        </div>
+      </div>
+      <div class="quem-content">
+        <div class="section-label">Quem é Larissa</div>
+        <h2>
+          Engenheira.
+          <em>Mentora.</em>
+        </h2>
+        <div class="quem-creds">
+          <div class="quem-cred">Engenheira Eletricista gerenciando projetos multimilionários nos EUA</div>
+          <div class="quem-cred">PMP certificada pelo PMI · MBA em Gestão de Projetos pela USP</div>
+          <div class="quem-cred">Guinness World Record Holder — dez/2025</div>
+          <div class="quem-cred">Brasileira vivendo e trabalhando nos EUA desde 2015</div>
+        </div>
+        <div class="quem-story">
+          "Sair do Brasil foi a decisão mais difícil e mais transformadora da minha vida. Não foi milagre. Foi consistência. Foram mini hábitos. Foi método. E foi aí que nasceu a ROUTE."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="para-quem">
+  <div class="container">
+    <div class="section-label">Para quem é</div>
+    <h2 class="section-title">
+      Para quem nunca<br>
+      <em>para de crescer.</em>
+    </h2>
+    <div class="para-quem-grid">
+      <div class="pq-card sim">
+        <h3>É para <em>você</em> se:</h3>
+        <ul class="pq-list">
+          <li>Quer alinhar vida pessoal e carreira</li>
+          <li>Quer clareza para tomar decisões importantes</li>
+          <li>Quer parar de viver no modo automático</li>
+          <li>Quer sair do planejamento eterno e executar</li>
+          <li>Sabe que ser um profissional melhor começa por ser um ser humano melhor</li>
+          <li>Está disposta a se comprometer com o processo</li>
+        </ul>
+      </div>
+      <div class="pq-card nao">
+        <h3>Não é para você se:</h3>
+        <ul class="pq-list">
+          <li>Quer fórmula mágica sem comprometimento</li>
+          <li>Não está disposta a olhar para si mesma</li>
+          <li>Quer motivação sem ação</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-label">Resultados reais</div>
+    <h2 class="section-title">
+      Histórias de quem<br>
+      <em>encontrou a rota.</em>
+    </h2>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-quote">[Depoimento em breve]</div>
+        <div class="dep-author">— Nome · Ocupação · Cidade</div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-quote">[Depoimento em breve]</div>
+        <div class="dep-author">— Nome · Ocupação · Cidade</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="formulario">
+  <div class="container">
+    <div class="section-label" style="justify-content: center;">Próximo passo</div>
+    <h2>
+      A mentoria te mostra o caminho.
+      <em>Você decide caminhar.</em>
+    </h2>
+    <p class="cta-sub">Preencha o formulário de interesse. Vamos conversar para entender se a Mentoria ROUTE é o caminho certo para você agora.</p>
+    <a href="[LINK DO FORMULÁRIO]" class="cta-btn-large">Preencher formulário de interesse →</a>
+    <p class="cta-note">Sessões em Português e Inglês · PT & EN · @larissasayuri.q</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Larissa <span>Sayuri</span> · ROUTE</div>
+  <div class="footer-right">
+    @larissasayuri.q<br>
+    "Your route to the life you want."
+  </div>
+</footer>
+
+</body>
+</html>
