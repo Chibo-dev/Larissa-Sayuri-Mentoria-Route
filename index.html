@@ -2,256 +2,517 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentoria ROUTE — Larissa Sayuri</title>
-<meta name="description" content="Mentoria individual de desenvolvimento pessoal e carreira. Your route to the life you want.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.className='js';</script>
+<title>Mentoria ROUTE — Larissa Sayuri | Desenvolvimento Pessoal & Carreira</title>
+<meta name="description" content="Mentoria individual de desenvolvimento pessoal e carreira com Larissa Sayuri — Engenheira, PMP, MBA USP, Guinness World Record. 6 encontros, 3 meses. PT & EN. Your route to the life you want.">
+<meta name="author" content="Larissa Sayuri">
+<meta name="theme-color" content="#060C18">
+<link rel="canonical" href="https://mentoriaroute.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Mentoria ROUTE — Larissa Sayuri">
+<meta property="og:description" content="Your route to the life you want. Mentoria individual de desenvolvimento pessoal e carreira. PT & EN.">
+<meta property="og:url" content="https://mentoriaroute.com/">
+<meta property="og:image" content="https://mentoriaroute.com/og-image.jpg">
+<meta property="og:image:secure_url" content="https://mentoriaroute.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mentoria ROUTE — Larissa Sayuri">
+<meta property="og:site_name" content="Mentoria ROUTE">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mentoria ROUTE — Larissa Sayuri">
+<meta name="twitter:description" content="Your route to the life you want. Mentoria individual PT & EN.">
+<meta name="twitter:image" content="https://mentoriaroute.com/og-image.jpg">
+<meta name="twitter:image:alt" content="Mentoria ROUTE — Larissa Sayuri">
+<!-- Se a Larissa tiver Twitter/X, descomentar e preencher:
+<meta name="twitter:site" content="@larissasayuri">
+<meta name="twitter:creator" content="@larissasayuri">
+-->
+
+<!-- Hreflang: sinaliza para o Google as variantes de idioma -->
+<link rel="alternate" hreflang="pt-BR" href="https://mentoriaroute.com/">
+<link rel="alternate" hreflang="en" href="https://mentoriaroute.com/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://mentoriaroute.com/">
+
+<!-- Favicon SVG inline (zero request) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060C18'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-style='italic' font-weight='300' fill='%23C9A84C' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+<!-- Preconnect fonts (mantemos Google Fonts mas otimizado) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap"></noscript>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://mentoriaroute.com/#larissa",
+      "name": "Larissa Sayuri",
+      "jobTitle": "Engenheira Eletricista, Mentora de Carreira",
+      "description": "Engenheira Eletricista, PMP, MBA em Gestão de Projetos pela USP, Guinness World Record Holder e Mentora Oficial do PMI Washington DC.",
+      "alumniOf": {"@type":"CollegeOrUniversity","name":"Universidade de São Paulo"},
+      "hasCredential": ["PMP","MBA Gestão de Projetos USP","Guinness World Record Holder"],
+      "knowsLanguage": ["pt-BR","en-US"],
+      "sameAs": ["https://instagram.com/larissasayuri.q"]
+    },
+    {
+      "@type": "Service",
+      "name": "Mentoria ROUTE",
+      "provider": {"@id":"https://mentoriaroute.com/#larissa"},
+      "serviceType": "Mentoria individual de desenvolvimento pessoal e carreira",
+      "areaServed": ["Brasil","Estados Unidos","Global"],
+      "availableLanguage": ["pt-BR","en-US"],
+      "description": "6 sessões individuais ao longo de 3 meses, com método proprietário ROUTE: Reflection, Orientation, Understanding, Trajectory, Execution."
+    }
+  ]
+}
+</script>
+
 <style>
+  /* ============ DESIGN TOKENS ============ */
   :root {
     --navy: #0B1120;
     --midnight: #060C18;
+    --midnight-2: #0A0F1C;
     --off-white: #F2EDE6;
+    --off-white-soft: #E5DFD5;
     --gold: #C9A84C;
     --gold-light: #E8C97A;
     --gold-dim: rgba(201,168,76,0.12);
+    --gold-glow: rgba(201,168,76,0.25);
     --blue: #1A7FD4;
+    --blue-light: #4FA3E0;
     --blue-dim: rgba(26,127,212,0.10);
-    --slate: #8A8F99;
-    --border: rgba(201,168,76,0.15);
-    --border-subtle: rgba(255,255,255,0.05);
+    --slate: #9BA0AB;        /* Subido de 8A8F99 — WCAG AA garantido sobre midnight */
+    --slate-strong: #B8BDC8;
+    --border: rgba(201,168,76,0.18);
+    --border-subtle: rgba(255,255,255,0.06);
+    --border-blue: rgba(26,127,212,0.20);
+
+    --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --transition: 0.4s var(--ease-out);
   }
 
+  /* ============ RESET ============ */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
     background: var(--midnight);
     color: var(--off-white);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--sans);
     font-weight: 300;
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  img, svg { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+  ul { list-style: none; }
+  ::selection { background: var(--gold); color: var(--midnight); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 2px; }
+
+  /* Grain overlay sutil — atmosfera premium */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.93 0 0 0 0 0.90 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
   }
 
-  /* ── NAV ── */
+  /* ============ NAV ============ */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 20px 48px;
+    padding: 18px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(6,12,24,0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(6,12,24,0.72);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
     border-bottom: 1px solid var(--border-subtle);
+    transition: padding 0.3s var(--ease-out), background 0.3s var(--ease-out);
   }
-
+  nav.scrolled {
+    padding: 12px 48px;
+    background: rgba(6,12,24,0.92);
+  }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--serif);
     font-size: 18px;
     font-weight: 300;
     color: var(--off-white);
-    text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
   }
-
   .nav-logo span { color: var(--gold); font-style: italic; }
-
+  .nav-logo-tag {
+    font-family: var(--sans);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-left: 10px;
+    padding-left: 12px;
+    border-left: 1px solid var(--border-subtle);
+  }
   .nav-cta {
+    position: relative;
     background: transparent;
     border: 1px solid var(--gold);
     color: var(--gold);
-    font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 10px 24px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    padding: 10px 22px;
+    overflow: hidden;
+    transition: color 0.3s var(--ease-out);
   }
+  .nav-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease-out);
+    z-index: -1;
+  }
+  .nav-cta:hover { color: var(--midnight); }
+  .nav-cta:hover::before { transform: translateY(0); }
 
-  .nav-cta:hover {
+  /* ── Language switcher ── */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid var(--border-subtle);
+    padding: 4px;
+    background: rgba(255,255,255,0.02);
+  }
+  .lang-btn {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 6px 10px;
+    color: var(--slate);
+    transition: color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+    line-height: 1;
+  }
+  .lang-btn:hover { color: var(--off-white); }
+  .lang-btn.active {
     background: var(--gold);
     color: var(--midnight);
   }
 
-  /* ── SECTIONS ── */
-  section { position: relative; }
-
+  /* ============ LAYOUT ============ */
+  section { position: relative; z-index: 2; }
   .container {
-    max-width: 960px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 0 48px;
   }
 
-  /* ── HERO ── */
+  /* ============ HERO ============ */
   .hero {
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
-    background: var(--midnight);
-    padding: 120px 0 80px;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(26,127,212,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 15% 85%, rgba(201,168,76,0.04) 0%, transparent 50%),
+      var(--midnight);
+    padding: 140px 0 100px;
     overflow: hidden;
+    position: relative;
   }
-
+  /* Mapa/grid sutil — coerente com o conceito ROUTE/rota */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.035) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: -1px -1px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    pointer-events: none;
+    z-index: 1;
+  }
   .hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 3px; height: 100%;
-    background: linear-gradient(180deg, var(--gold) 0%, var(--blue) 60%, transparent 100%);
+    background: linear-gradient(180deg, var(--gold) 0%, var(--blue) 55%, transparent 100%);
+    box-shadow: 0 0 24px rgba(201,168,76,0.3);
+    z-index: 3;
   }
-
+  .hero > .container { position: relative; z-index: 4; }
+  .hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(60px);
+    animation: drift 20s ease-in-out infinite;
+    z-index: 2;
+  }
   .hero-glow-1 {
-    position: absolute;
-    top: 20%; right: -100px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(26,127,212,0.06) 0%, transparent 70%);
-    pointer-events: none;
+    top: 10%; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(26,127,212,0.22) 0%, rgba(26,127,212,0.08) 40%, transparent 70%);
+  }
+  .hero-glow-2 {
+    bottom: 0; left: 15%;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(201,168,76,0.14) 0%, rgba(201,168,76,0.04) 45%, transparent 70%);
+    animation-delay: -7s;
+    animation-duration: 25s;
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0,0); }
+    50% { transform: translate(30px,-20px); }
   }
 
-  .hero-glow-2 {
+  /* Decorative compass mark — mais visível */
+  .hero-mark {
     position: absolute;
-    bottom: 10%; left: 30%;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    width: 320px;
+    height: 320px;
+    opacity: 0.22;
     pointer-events: none;
+    animation: rotate 80s linear infinite;
+    z-index: 2;
   }
+  @keyframes rotate { to { transform: translateY(-50%) rotate(360deg); } }
 
   .hero-eyebrow {
     font-size: 10px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--blue);
+    color: var(--blue-light);
     margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.2s forwards;
+    animation: fadeUp 0.9s var(--ease-out) 0.1s forwards;
   }
-
+  .hero-eyebrow::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--blue-light);
+  }
   .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 7vw, 80px);
+    font-family: var(--serif);
+    font-size: clamp(52px, 8vw, 92px);
     font-weight: 300;
-    line-height: 1.0;
-    margin-bottom: 8px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
+    animation: fadeUp 0.9s var(--ease-out) 0.3s forwards;
   }
-
   .hero h1 em {
     font-style: italic;
     color: var(--gold);
     display: block;
   }
-
   .hero-tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 2.5vw, 22px);
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.4vw, 24px);
     font-style: italic;
     font-weight: 300;
-    color: var(--off-white);
+    color: var(--off-white-soft);
+    margin: 32px 0 18px;
     opacity: 0;
-    margin: 28px 0 16px;
-    animation: fadeUp 0.8s ease 0.6s forwards;
+    animation: fadeUp 0.9s var(--ease-out) 0.5s forwards;
   }
-
   .hero-sub {
-    font-size: 13px;
-    color: var(--slate);
-    max-width: 520px;
+    font-size: 14px;
+    color: var(--slate-strong);
+    max-width: 540px;
     line-height: 1.8;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.7s forwards;
     margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease-out) 0.6s forwards;
   }
-
   .hero-creds {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 48px;
     opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s forwards;
+    animation: fadeUp 0.9s var(--ease-out) 0.75s forwards;
   }
-
   .cred-badge {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     background: var(--gold-dim);
     border: 1px solid var(--border);
-    padding: 6px 14px;
+    padding: 7px 14px;
     font-size: 10px;
     font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 0.6px;
+    transition: all 0.3s var(--ease-out);
+  }
+  .cred-badge:hover {
+    background: rgba(201,168,76,0.22);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+  }
+  .cred-badge svg {
+    width: 12px; height: 12px;
     color: var(--gold);
-    letter-spacing: 0.5px;
   }
 
-  .hero-btn {
-    display: inline-block;
+  /* CTA group — primary + secondary */
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s var(--ease-out) 0.9s forwards;
+  }
+  .btn-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     background: var(--gold);
     color: var(--midnight);
-    font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 16px 40px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.9s forwards;
+    padding: 17px 36px;
+    overflow: hidden;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
   }
-
-  .hero-btn:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-  }
-
-  .hero-scroll {
-    position: absolute;
-    bottom: 40px;
-    left: 48px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--slate);
-    opacity: 0.4;
-  }
-
-  .hero-scroll::before {
+  .btn-primary::before {
     content: '';
-    width: 32px;
-    height: 1px;
-    background: var(--slate);
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.7s var(--ease-out);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(201,168,76,0.25);
+  }
+  .btn-primary:hover::before { left: 100%; }
+  .btn-primary svg {
+    width: 14px; height: 14px;
+    transition: transform 0.3s var(--ease-out);
+  }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--off-white-soft);
+    padding: 14px 0;
+    position: relative;
+    transition: color 0.3s var(--ease-out);
+  }
+  .btn-secondary::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; left: 0;
+    width: 100%; height: 1px;
+    background: var(--off-white-soft);
+    transform-origin: right;
+    transform: scaleX(0.3);
+    transition: transform 0.4s var(--ease-out);
+  }
+  .btn-secondary:hover { color: var(--gold-light); }
+  .btn-secondary:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+    background: var(--gold-light);
   }
 
-  /* ── PROBLEMA ── */
-  .problema {
-    background: var(--navy);
-    padding: 100px 0;
+  /* ============ REVEAL ANIMATIONS (scroll) ============
+     Progressive enhancement: visíveis por padrão, só escondem quando a classe
+     .js for adicionada ao <html> via JS (que cria o IntersectionObserver). */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
   }
+  .js .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .js .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  }
+  .js .reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger.in > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger.in > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger.in > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
 
+  /* ============ SECTION COMMON ============ */
   .section-label {
     font-size: 9px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     display: flex;
     align-items: center;
     gap: 16px;
   }
-
   .section-label::after {
     content: '';
     flex: 1;
@@ -259,116 +520,177 @@
     background: var(--border);
     max-width: 60px;
   }
-
+  .section-label.center {
+    justify-content: center;
+  }
+  .section-label.center::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    max-width: 60px;
+  }
+  .section-label.center::after {
+    margin-left: 0;
+  }
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 5vw, 52px);
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 56px);
     font-weight: 300;
-    line-height: 1.1;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     margin-bottom: 48px;
   }
-
   .section-title em {
     font-style: italic;
     color: var(--gold);
   }
 
+  /* ============ PROBLEMA ============ */
+  .problema {
+    background: var(--navy);
+    padding: 110px 0;
+  }
   .problema-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 14px;
     margin-bottom: 56px;
   }
-
   .problema-item {
     background: var(--midnight);
     border: 1px solid var(--border-subtle);
     border-left: 2px solid var(--blue);
-    padding: 24px 28px;
-    font-size: 13px;
-    color: var(--slate);
+    padding: 26px 30px;
+    font-size: 13.5px;
+    color: var(--slate-strong);
     line-height: 1.7;
-    transition: border-color 0.3s ease;
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+    overflow: hidden;
   }
-
-  .problema-item:hover {
+  .problema-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 100%;
+    background: linear-gradient(90deg, rgba(201,168,76,0.04) 0%, transparent 100%);
+    transition: width 0.5s var(--ease-out);
+  }
+  .problema-item:hover,
+  .problema-item.focused {
     border-left-color: var(--gold);
+    transform: translateX(2px);
   }
-
+  .problema-item:hover::before,
+  .problema-item.focused::before { width: 100%; }
   .problema-verdict {
     background: var(--gold-dim);
     border: 1px solid var(--border);
-    padding: 32px 40px;
+    padding: 36px 44px;
     text-align: center;
+    position: relative;
   }
-
+  .problema-verdict::before,
+  .problema-verdict::after {
+    content: '';
+    position: absolute;
+    width: 12px; height: 12px;
+    border: 1px solid var(--gold);
+  }
+  .problema-verdict::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .problema-verdict::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
   .problema-verdict p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(20px, 3vw, 28px);
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 30px);
     font-weight: 300;
     line-height: 1.4;
   }
-
   .problema-verdict em {
     font-style: italic;
     color: var(--gold);
   }
-
   .problema-verdict .en {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
     font-style: italic;
     color: var(--slate);
-    margin-top: 12px;
-    opacity: 0.6;
+    margin-top: 14px;
+    letter-spacing: 0.5px;
+    font-family: var(--sans);
+    font-weight: 300;
   }
 
-  /* ── MÉTODO ── */
+  /* ============ MÉTODO (filosofia) ============ */
   .metodo {
     background: var(--midnight);
-    padding: 100px 0;
+    padding: 110px 0;
+    position: relative;
   }
-
   .metodo::before {
     content: '';
     position: absolute;
     top: 0; right: 0;
-    width: 3px; height: 100%;
-    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+    width: 2px; height: 100%;
+    background: linear-gradient(180deg, transparent, var(--gold) 50%, transparent);
+    opacity: 0.4;
   }
-
+  .metodo-intro {
+    font-size: 14px;
+    color: var(--slate-strong);
+    max-width: 580px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
   .route-letters {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-top: 48px;
   }
-
   .route-row {
     display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 0;
+    grid-template-columns: 64px 1fr;
     align-items: stretch;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s var(--ease-out);
+    cursor: default;
   }
-
-  .route-row:hover {
-    transform: translateX(4px);
+  .route-row:hover,
+  .route-row.focused {
+    transform: translateX(6px);
   }
-
   .route-letter-box {
     background: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-family: var(--serif);
+    font-size: 30px;
     font-weight: 300;
     color: white;
-    padding: 24px 0;
-    flex-shrink: 0;
+    padding: 26px 0;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s var(--ease-out), color 0.4s var(--ease-out);
   }
-
+  .route-row:hover .route-letter-box,
+  .route-row.focused .route-letter-box {
+    background: var(--gold);
+    color: var(--midnight);
+  }
+  .route-letter-box::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: width 0.6s var(--ease-out), height 0.6s var(--ease-out);
+  }
+  .route-row:hover .route-letter-box::before,
+  .route-row.focused .route-letter-box::before {
+    width: 100px; height: 100px;
+  }
   .route-content {
     background: var(--navy);
     border: 1px solid var(--border-subtle);
@@ -377,9 +699,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
+    transition: border-color 0.4s var(--ease-out);
   }
-
+  .route-row:hover .route-content,
+  .route-row.focused .route-content {
+    border-color: var(--border);
+  }
   .route-word {
     font-size: 10px;
     letter-spacing: 3px;
@@ -387,733 +713,2356 @@
     color: var(--gold);
     font-weight: 500;
   }
-
   .route-desc {
-    font-size: 13px;
-    color: var(--slate);
-    line-height: 1.6;
+    font-size: 13.5px;
+    color: var(--slate-strong);
+    line-height: 1.65;
   }
 
-  /* ── SESSÕES ── */
+  /* ============ SESSÕES (entregável) ============ */
   .sessoes {
     background: var(--navy);
-    padding: 100px 0;
+    padding: 110px 0;
   }
-
   .sessoes-intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 48px;
     margin-bottom: 56px;
     align-items: end;
   }
-
-  .sessoes-stat {
+  .sessoes-stats {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    gap: 48px;
+    justify-content: flex-end;
   }
-
+  .sessoes-stat {
+    text-align: right;
+  }
   .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 72px;
+    font-family: var(--serif);
+    font-size: 76px;
     font-weight: 300;
     line-height: 1;
     color: var(--off-white);
+    letter-spacing: -0.02em;
   }
-
-  .stat-number span { color: var(--gold); }
-
+  .stat-number span { color: var(--gold); font-size: 0.6em; }
   .stat-label {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--slate);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
   }
-
   .sessoes-grid {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-
   .sessao-item {
     display: grid;
-    grid-template-columns: 40px 120px 1fr 100px;
-    align-items: center;
-    gap: 0;
+    grid-template-columns: 56px 140px 1fr 110px;
+    align-items: stretch;
     background: var(--midnight);
     border: 1px solid var(--border-subtle);
     overflow: hidden;
-    transition: background 0.2s ease;
+    transition: all 0.3s var(--ease-out);
+    position: relative;
   }
-
-  .sessao-item:hover { background: rgba(26,127,212,0.04); }
-
+  .sessao-item::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.04));
+    transition: width 0.5s var(--ease-out);
+  }
+  .sessao-item:hover,
+  .sessao-item.focused {
+    border-color: var(--border);
+  }
+  .sessao-item:hover::after,
+  .sessao-item.focused::after { width: 50%; }
   .sessao-letter {
     background: var(--blue);
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-family: var(--serif);
+    font-size: 20px;
     color: white;
-    padding: 20px 0;
-    min-height: 64px;
+    min-height: 76px;
+    font-weight: 300;
   }
-
   .sessao-letter.gold-bg { background: var(--gold); color: var(--midnight); }
-
   .sessao-name {
-    padding: 0 20px;
+    padding: 0 22px;
     font-size: 9px;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     color: var(--gold);
     font-weight: 500;
+    display: flex;
+    align-items: center;
   }
-
   .sessao-desc {
-    padding: 16px 20px;
-    font-size: 12px;
-    color: var(--slate);
+    padding: 18px 22px;
+    font-size: 12.5px;
+    color: var(--slate-strong);
     line-height: 1.6;
     border-left: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
   }
-
   .sessao-timing {
-    padding: 0 20px;
+    padding: 0 22px;
     font-size: 10px;
     color: var(--slate);
     text-align: right;
-    opacity: 0.6;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .sessoes-note {
+    font-size: 11px;
+    color: var(--slate);
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.7;
   }
 
-  /* ── QUEM SOU ── */
+  /* ============ QUEM ============ */
   .quem {
     background: var(--midnight);
-    padding: 100px 0;
+    padding: 110px 0;
   }
-
   .quem-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 64px;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 72px;
     align-items: start;
   }
-
   .quem-photo {
     position: relative;
   }
-
-  .photo-placeholder {
+  .photo-frame {
     width: 100%;
     aspect-ratio: 3/4;
-    background: var(--navy);
+    background:
+      linear-gradient(135deg, var(--navy) 0%, var(--midnight-2) 100%);
     border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
     position: relative;
     overflow: hidden;
   }
-
-  .photo-placeholder::before {
+  /* Placeholder elegante — monograma + linhas decorativas */
+  .photo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, transparent 49.5%, rgba(201,168,76,0.04) 50%, transparent 50.5%),
+      linear-gradient(0deg, transparent 49.5%, rgba(201,168,76,0.04) 50%, transparent 50.5%);
+  }
+  .photo-frame::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0;
     width: 100%; height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--blue));
+    background: linear-gradient(90deg, var(--gold) 0%, var(--blue) 100%);
   }
-
-  .photo-placeholder p {
-    font-size: 10px;
-    color: var(--slate);
-    letter-spacing: 2px;
+  .photo-monogram {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .photo-monogram-text {
+    font-family: var(--serif);
+    font-size: 96px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    font-style: italic;
+    letter-spacing: -0.04em;
+    opacity: 0.85;
+  }
+  .photo-monogram-text .dot {
+    color: var(--blue);
+    font-style: normal;
+  }
+  .photo-monogram-name {
+    font-size: 9px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    opacity: 0.4;
+    color: var(--slate);
+    margin-top: 18px;
+    opacity: 0.7;
   }
-
-  .photo-placeholder .photo-icon {
-    font-size: 32px;
-    opacity: 0.15;
+  .photo-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--gold);
+    opacity: 0.6;
   }
+  .photo-corner.tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+  .photo-corner.tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
+  .photo-corner.bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
+  .photo-corner.br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
 
   .quem-content h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 4vw, 52px);
+    font-family: var(--serif);
+    font-size: clamp(38px, 4.5vw, 56px);
     font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 24px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
   }
-
   .quem-content h2 em {
     font-style: italic;
     color: var(--gold);
     display: block;
   }
-
   .quem-creds {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 28px;
+    gap: 12px;
+    margin-bottom: 32px;
   }
-
   .quem-cred {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    font-size: 12px;
-    color: var(--slate);
+    gap: 14px;
+    font-size: 13px;
+    color: var(--slate-strong);
     line-height: 1.5;
   }
-
   .quem-cred::before {
     content: '';
-    width: 16px;
-    height: 1px;
+    width: 18px; height: 1px;
     background: var(--blue);
     flex-shrink: 0;
-    margin-top: 8px;
+    margin-top: 10px;
   }
-
   .quem-story {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
+    font-family: var(--serif);
+    font-size: 17px;
     font-style: italic;
     font-weight: 300;
-    color: var(--off-white);
+    color: var(--off-white-soft);
     line-height: 1.7;
-    opacity: 0.7;
-    padding-top: 24px;
+    padding: 28px 0 0;
     border-top: 1px solid var(--border-subtle);
+    position: relative;
+  }
+  .quem-story::before {
+    content: '"';
+    position: absolute;
+    top: 8px; left: -8px;
+    font-size: 64px;
+    color: var(--gold);
+    opacity: 0.2;
+    font-family: var(--serif);
+    line-height: 0.8;
   }
 
-  /* ── PARA QUEM ── */
+  /* ============ PARA QUEM ============ */
   .para-quem {
     background: var(--navy);
-    padding: 100px 0;
+    padding: 110px 0;
   }
-
   .para-quem-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 28px;
     margin-top: 48px;
   }
-
   .pq-card {
     background: var(--midnight);
     border: 1px solid var(--border-subtle);
-    padding: 40px;
+    padding: 44px;
+    position: relative;
+    transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
   }
-
-  .pq-card.sim { border-top: 2px solid var(--gold); }
-  .pq-card.nao { border-top: 2px solid var(--slate); }
-
+  .pq-card:hover,
+  .pq-card.focused {
+    transform: translateY(-3px);
+  }
+  .pq-card.sim {
+    border-top: 2px solid var(--gold);
+  }
+  .pq-card.sim:hover,
+  .pq-card.sim.focused {
+    border-color: var(--border);
+    border-top-color: var(--gold);
+  }
+  .pq-card.nao {
+    border-top: 2px solid var(--slate);
+    opacity: 0.92;
+  }
   .pq-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-family: var(--serif);
+    font-size: 26px;
     font-weight: 300;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
-
   .pq-card.sim h3 em { color: var(--gold); font-style: italic; }
-  .pq-card.nao h3 { color: var(--slate); opacity: 0.7; }
-
+  .pq-card.nao h3 { color: var(--slate-strong); }
   .pq-list {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
-
   .pq-list li {
-    font-size: 12px;
-    color: var(--slate);
-    padding-left: 20px;
+    font-size: 13px;
+    color: var(--slate-strong);
+    padding-left: 24px;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.65;
   }
-
   .pq-card.sim .pq-list li::before {
     content: '→';
     position: absolute;
     left: 0;
     color: var(--gold);
-    font-size: 10px;
+    font-size: 12px;
+    transition: transform 0.3s var(--ease-out);
   }
-
+  .pq-card.sim:hover .pq-list li::before {
+    transform: translateX(2px);
+  }
   .pq-card.nao .pq-list li::before {
     content: '×';
     position: absolute;
     left: 0;
     color: var(--slate);
-    font-size: 10px;
-    opacity: 0.5;
+    font-size: 12px;
+    opacity: 0.6;
   }
 
-  /* ── DEPOIMENTOS ── */
+  /* ============ DEPOIMENTOS ============ */
   .depoimentos {
     background: var(--midnight);
-    padding: 100px 0;
+    padding: 110px 0;
   }
-
   .dep-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
     margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
   .dep-card {
     background: var(--navy);
     border: 1px solid var(--border-subtle);
-    padding: 36px;
+    padding: 36px 32px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: border-color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
   }
-
   .dep-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 3px; height: 100%;
   }
-
   .dep-card:nth-child(1)::before { background: var(--gold); }
   .dep-card:nth-child(2)::before { background: var(--blue); }
-
+  .dep-card:nth-child(3)::before { background: linear-gradient(180deg, var(--gold) 0%, var(--blue) 100%); }
+  .dep-card:hover,
+  .dep-card.focused {
+    border-color: var(--border);
+    transform: translateY(-3px);
+  }
   .dep-quote {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--serif);
     font-size: 15px;
     font-style: italic;
     font-weight: 300;
-    color: var(--off-white);
+    color: var(--off-white-soft);
     line-height: 1.7;
-    margin-bottom: 20px;
-    opacity: 0.6;
-    min-height: 80px;
+    flex: 1;
+    position: relative;
+    padding-top: 8px;
+  }
+  .dep-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px; left: -6px;
+    font-size: 52px;
+    color: var(--gold);
+    opacity: 0.25;
+    font-family: var(--serif);
+    line-height: 1;
+  }
+  .dep-author {
     display: flex;
     align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
   }
-
-  .dep-author {
-    font-size: 10px;
+  .dep-avatar {
+    width: 42px;
+    height: 42px;
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
     color: var(--gold);
+    flex-shrink: 0;
+  }
+  .dep-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .dep-name {
+    font-size: 13px;
+    color: var(--off-white);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  .dep-role {
+    font-size: 10px;
+    color: var(--slate);
     letter-spacing: 1px;
-    opacity: 0.5;
+    text-transform: uppercase;
   }
 
-  /* ── CTA FINAL ── */
-  .cta-final {
+  /* ============ FAQ ============ */
+  .faq {
     background: var(--navy);
-    padding: 120px 0;
+    padding: 110px 0;
+  }
+  .faq-list {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .faq-item {
+    background: var(--midnight);
+    border: 1px solid var(--border-subtle);
+    transition: border-color 0.3s var(--ease-out);
+  }
+  .faq-item:hover { border-color: var(--border); }
+  .faq-item[open] { border-color: var(--border); }
+  .faq-summary {
+    padding: 24px 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    list-style: none;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--off-white);
+    transition: color 0.3s var(--ease-out);
+  }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary:hover { color: var(--gold-light); }
+  .faq-icon {
+    width: 24px; height: 24px;
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.4s var(--ease-out);
+  }
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+  }
+  .faq-icon::before {
+    width: 10px; height: 1px;
+  }
+  .faq-icon::after {
+    width: 1px; height: 10px;
+    transition: transform 0.3s var(--ease-out);
+  }
+  .faq-item[open] .faq-icon::after { transform: rotate(90deg); }
+  .faq-item[open] .faq-icon { transform: rotate(180deg); }
+  .faq-body {
+    padding: 0 32px 28px 32px;
+    font-size: 13.5px;
+    color: var(--slate-strong);
+    line-height: 1.75;
+    max-width: 720px;
+  }
+
+  /* ============ CTA FINAL ============ */
+  .cta-final {
+    background: var(--midnight);
+    padding: 140px 0 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-
   .cta-final::before {
     content: 'ROUTE';
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 200px;
+    font-family: var(--serif);
+    font-size: clamp(120px, 22vw, 240px);
     font-weight: 300;
-    color: rgba(201,168,76,0.03);
-    letter-spacing: 30px;
+    color: rgba(201,168,76,0.025);
+    letter-spacing: 32px;
     pointer-events: none;
     white-space: nowrap;
+    line-height: 1;
   }
-
-  .cta-final .section-label {
-    justify-content: center;
-  }
-
-  .cta-final .section-label::after { display: none; }
-
   .cta-final h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 5vw, 60px);
+    font-family: var(--serif);
+    font-size: clamp(38px, 5vw, 64px);
     font-weight: 300;
-    line-height: 1.15;
-    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    position: relative;
   }
-
   .cta-final h2 em {
     font-style: italic;
     color: var(--gold);
     display: block;
   }
-
-  .cta-final .cta-sub {
-    font-size: 13px;
-    color: var(--slate);
-    margin-bottom: 48px;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+  .cta-sub {
+    font-size: 14px;
+    color: var(--slate-strong);
+    margin: 0 auto 48px;
+    max-width: 520px;
     line-height: 1.8;
+    position: relative;
+  }
+  .cta-form-wrapper {
+    max-width: 580px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
 
-  .cta-btn-large {
-    display: inline-block;
+  /* ── Stepper / barra de progresso ── */
+  .form-stepper {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  .form-stepper-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .form-stepper-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .form-stepper-count {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--slate);
+    font-family: var(--sans);
+  }
+  .form-stepper-count strong {
+    color: var(--off-white);
+    font-weight: 500;
+  }
+  .form-stepper-bar {
+    height: 2px;
+    background: var(--border-subtle);
+    overflow: hidden;
+    position: relative;
+  }
+  .form-stepper-bar-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 33.33%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+    transition: width 0.5s var(--ease-out);
+  }
+  .form-step-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--off-white);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .form-step-title em { color: var(--gold); font-style: italic; }
+  .form-step-sub {
+    font-size: 12px;
+    color: var(--slate);
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Steps ── */
+  .form-step {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+    animation: stepIn 0.45s var(--ease-out);
+  }
+  .form-step.active { display: flex; }
+  @keyframes stepIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--slate-strong);
+    font-weight: 500;
+  }
+  .form-label .req {
+    color: var(--gold);
+    margin-left: 2px;
+  }
+  .form-label .opt {
+    color: var(--slate);
+    font-weight: 300;
+    font-size: 10px;
+    margin-left: 6px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-style: italic;
+  }
+  .form-field input[type="text"],
+  .form-field input[type="email"],
+  .form-field input[type="tel"],
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    background: var(--navy);
+    border: 1px solid var(--border-subtle);
+    color: var(--off-white);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 300;
+    padding: 14px 18px;
+    transition: border-color 0.3s var(--ease-out), background 0.3s var(--ease-out);
+  }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: var(--slate);
+    opacity: 0.55;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: var(--midnight-2);
+  }
+  .form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 44px;
+    cursor: pointer;
+  }
+  .form-field select option {
+    background: var(--navy);
+    color: var(--off-white);
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: var(--sans);
+  }
+
+  /* ── Radio group estilizado ── */
+  .form-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-radio-group.cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .form-radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--navy);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: border-color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+    font-size: 13px;
+    color: var(--off-white-soft);
+  }
+  .form-radio:hover {
+    border-color: var(--border);
+  }
+  .form-radio input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .form-radio-mark {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--slate);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    transition: border-color 0.25s var(--ease-out);
+  }
+  .form-radio-mark::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.25s var(--ease-out);
+  }
+  .form-radio input:checked ~ .form-radio-mark {
+    border-color: var(--gold);
+  }
+  .form-radio input:checked ~ .form-radio-mark::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .form-radio:has(input:checked) {
+    background: rgba(201,168,76,0.06);
+    border-color: var(--border);
+  }
+  .form-radio input:focus-visible ~ .form-radio-mark {
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.25);
+  }
+  .form-radio-other-input {
+    margin-top: 6px;
+    width: 100%;
+    background: var(--midnight-2);
+    border: 1px solid var(--border-subtle);
+    color: var(--off-white);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px 14px;
+    transition: border-color 0.3s var(--ease-out);
+  }
+  .form-radio-other-input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  .form-error {
+    display: none;
+    font-size: 11px;
+    color: #E89B7A;
+    margin-top: 2px;
+    letter-spacing: 0.3px;
+  }
+  .form-field.error input[type="text"],
+  .form-field.error input[type="email"],
+  .form-field.error input[type="tel"],
+  .form-field.error select,
+  .form-field.error textarea {
+    border-color: #E89B7A;
+  }
+  .form-field.error .form-error,
+  .form-radio-group.error + .form-error { display: block; }
+  .form-radio-group.error .form-radio {
+    border-color: rgba(232,155,122,0.4);
+  }
+
+  /* ── Navegação ── */
+  .form-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .form-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--slate);
+    padding: 12px 0;
+    transition: color 0.3s var(--ease-out);
+    cursor: pointer;
+  }
+  .form-back:hover { color: var(--off-white); }
+  .form-back svg {
+    width: 12px; height: 12px;
+    transition: transform 0.3s var(--ease-out);
+  }
+  .form-back:hover svg { transform: translateX(-3px); }
+  .form-back.hidden { visibility: hidden; }
+
+  .form-next, .form-submit {
+    position: relative;
     background: var(--gold);
     color: var(--midnight);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--sans);
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 20px 56px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
+    padding: 16px 32px;
+    overflow: hidden;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
   }
-
-  .cta-btn-large:hover {
-    background: var(--gold-light);
+  .form-next::before, .form-submit::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+    transition: left 0.7s var(--ease-out);
+  }
+  .form-next:hover, .form-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 40px rgba(201,168,76,0.15);
+    box-shadow: 0 16px 36px rgba(201,168,76,0.22);
   }
+  .form-next:hover::before, .form-submit:hover::before { left: 100%; }
+  .form-next svg, .form-submit svg {
+    width: 13px; height: 13px;
+    transition: transform 0.3s var(--ease-out);
+  }
+  .form-next:hover svg, .form-submit:hover svg { transform: translateX(3px); }
 
   .cta-note {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--slate);
-    opacity: 0.5;
+    opacity: 0.7;
     letter-spacing: 1px;
+    margin-top: 28px;
+    position: relative;
+  }
+  .cta-trust {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--slate);
+    opacity: 0.6;
+    position: relative;
+  }
+  .cta-trust span { display: flex; align-items: center; gap: 8px; }
+  .cta-trust span::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
   }
 
-  /* ── FOOTER ── */
+  /* ============ FOOTER ============ */
   footer {
     background: var(--midnight);
     border-top: 1px solid var(--border-subtle);
-    padding: 40px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 48px 48px 32px;
   }
-
+  .footer-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto 36px;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
   .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
+    font-family: var(--serif);
+    font-size: 17px;
     font-weight: 300;
     color: var(--off-white);
-    opacity: 0.5;
+    opacity: 0.75;
   }
-
   .footer-logo span { color: var(--gold); font-style: italic; }
-
-  .footer-right {
-    font-size: 10px;
+  .footer-brand-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12px;
     color: var(--slate);
-    opacity: 0.4;
-    text-align: right;
-    letter-spacing: 1px;
+    opacity: 0.7;
+  }
+  .footer-ig-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    width: fit-content;
+    transition: color 0.3s var(--ease-out);
+  }
+  .footer-ig-main:hover { color: var(--gold); }
+  .footer-ig-main svg {
+    width: 14px; height: 14px;
+    flex-shrink: 0;
   }
 
-  /* ── ANIMATIONS ── */
+  /* ── Footer bottom (copyright | tagline | assinatura chibo) ── */
+  .footer-bottom {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+    font-size: 11px;
+  }
+  .footer-copyright {
+    color: var(--slate);
+    opacity: 0.65;
+    letter-spacing: 0.3px;
+  }
+  .footer-tagline-center {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--slate-strong);
+    opacity: 0.7;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* ── Chibo signature pill (ref estilo Quilombo, adaptado dark+gold) ── */
+  .footer-signature {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--slate);
+    opacity: 0.7;
+    transition: opacity 0.3s var(--ease-out);
+  }
+  .footer-signature:hover { opacity: 1; }
+  .footer-signature-label {
+    font-weight: 400;
+  }
+  .footer-signature-pills {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-signature-pills::before {
+    content: '';
+    display: none;
+  }
+  .footer-signature-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border-subtle);
+    flex-shrink: 0;
+  }
+  .footer-signature a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--off-white-soft);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 50px;
+    transition: all 0.3s var(--ease-out);
+    background: transparent;
+  }
+  .footer-signature a:hover {
+    background: rgba(201,168,76,0.06);
+    border-color: var(--border);
+    transform: translateY(-1px);
+    color: var(--off-white);
+  }
+  .footer-signature a.is-ig {
+    padding: 6px 10px;
+  }
+  .footer-signature a.is-ig:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+  /* Monograma C. */
+  .chibo-mark {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--off-white-soft);
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .chibo-mark span {
+    color: #22c55e;
+    margin-left: 1px;
+  }
+  .chibo-name { font-weight: 500; }
+  .footer-signature a:hover .chibo-mark {
+    color: var(--off-white);
+  }
+  /* Ícone Instagram */
+  .ig-icon {
+    width: 14px; height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ============ STICKY MOBILE CTA ============ */
+  .sticky-cta {
+    position: fixed;
+    bottom: 16px; left: 16px; right: 16px;
+    z-index: 90;
+    background: var(--gold);
+    color: var(--midnight);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    transform: translateY(calc(100% + 32px));
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.45s var(--ease-out), opacity 0.35s var(--ease-out);
+    display: none;
+  }
+  .sticky-cta.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ============ ANIMATIONS ============ */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(28px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── RESPONSIVE ── */
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    .quem-grid { grid-template-columns: 1fr; gap: 48px; }
+    .quem-photo { width: 100%; max-width: 320px; margin: 0 auto; }
+    .sessoes-intro { grid-template-columns: 1fr; gap: 32px; }
+    .sessoes-stats { justify-content: flex-start; gap: 56px; }
+    .sessoes-stat { text-align: left; }
+    .dep-grid { grid-template-columns: 1fr; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .nav-cta { display: none; }
+    .sticky-cta { display: block; }
+  }
+
   @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
+    nav { padding: 14px 20px; }
+    nav.scrolled { padding: 10px 20px; }
+    .nav-logo-tag { display: none; }
     .container { padding: 0 24px; }
-    .hero { padding: 100px 0 60px; }
+    .hero { padding: 110px 0 80px; }
+    .hero-mark { display: none; }
+    .hero-cta-group { gap: 16px; flex-direction: column; align-items: flex-start; }
+    .hero-cta-group .btn-primary,
+    .hero-cta-group .btn-secondary { width: 100%; justify-content: center; }
     .problema-grid { grid-template-columns: 1fr; }
-    .sessoes-intro { grid-template-columns: 1fr; gap: 24px; }
-    .sessao-item { grid-template-columns: 40px 1fr; }
-    .sessao-name, .sessao-timing { display: none; }
-    .quem-grid { grid-template-columns: 1fr; }
-    .para-quem-grid { grid-template-columns: 1fr; }
-    .dep-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 16px; text-align: center; }
-    .footer-right { text-align: center; }
-    .cta-final::before { font-size: 80px; }
+    .problema-verdict { padding: 28px 24px; }
+    .sessao-item {
+      grid-template-columns: 48px 1fr;
+      grid-template-rows: auto auto;
+      padding: 4px 0;
+    }
+    .sessao-letter { grid-row: 1 / 3; min-height: 100%; }
+    .sessao-name {
+      padding: 14px 20px 4px;
+      grid-column: 2;
+    }
+    .sessao-desc {
+      padding: 0 20px 14px;
+      grid-column: 2;
+      border-left: none;
+      font-size: 12px;
+    }
+    .sessao-timing {
+      display: none;
+    }
+    .para-quem-grid { grid-template-columns: 1fr; gap: 16px; }
+    .pq-card { padding: 32px 28px; }
+    .dep-grid { grid-template-columns: 1fr; gap: 14px; }
+    .dep-card { padding: 32px 28px; }
+    .cta-final { padding: 100px 0 100px; }
+    .cta-trust { gap: 16px; }
+    footer {
+      padding: 40px 24px 28px;
+    }
+    .footer-grid {
+      flex-direction: column;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+    .footer-bottom {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 18px;
+      padding-top: 24px;
+    }
+    .footer-tagline-center { order: -1; }
+    .footer-signature {
+      justify-self: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-copyright { text-align: center; }
+    .route-row { grid-template-columns: 52px 1fr; }
+    .route-letter-box { font-size: 24px; padding: 20px 0; }
+    .route-content { padding: 18px 22px; }
+    .photo-monogram-text { font-size: 72px; }
+    .faq-summary { padding: 20px 22px; font-size: 16px; gap: 16px; }
+    .faq-body { padding: 0 22px 24px; font-size: 13px; }
+    .quem-content h2 { margin-bottom: 22px; }
+    .quem-cred { font-size: 12.5px; }
+    body { padding-bottom: 80px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: clamp(44px, 12vw, 60px); }
+    .section-title { font-size: clamp(28px, 8vw, 38px); }
+  }
+
+  /* ============ REDUCED MOTION ============ */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .js .reveal, .js .reveal-stagger > * { opacity: 1; transform: none; }
+  }
+
+  /* ============ PRINT ============ */
+  @media print {
+    nav, .sticky-cta, .hero-glow, .hero-mark { display: none; }
+    body { background: white; color: black; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Larissa <span>Sayuri</span></a>
-  <a href="#formulario" class="nav-cta">Quero minha ROUTE</a>
+<!-- ============ NAV ============ -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="#top" class="nav-logo" aria-label="Mentoria ROUTE — início">
+    Larissa <span>Sayuri</span>
+    <span class="nav-logo-tag">ROUTE</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language / Idioma">
+      <button class="lang-btn" data-lang="pt" type="button" aria-label="Português">PT</button>
+      <button class="lang-btn" data-lang="en" type="button" aria-label="English">EN</button>
+    </div>
+    <a href="#formulario" class="nav-cta" data-pt="Quero minha ROUTE" data-en="Start my ROUTE">Quero minha ROUTE</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-glow-1"></div>
-  <div class="hero-glow-2"></div>
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+  <!-- Compass decorative SVG -->
+  <svg class="hero-mark" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="98" fill="none" stroke="currentColor" stroke-width="0.7" style="color: var(--gold)"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="0.5" style="color: var(--gold)"/>
+    <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="0.5" style="color: var(--gold)"/>
+    <line x1="100" y1="2" x2="100" y2="198" stroke="currentColor" stroke-width="0.6" style="color: var(--gold)"/>
+    <line x1="2" y1="100" x2="198" y2="100" stroke="currentColor" stroke-width="0.6" style="color: var(--gold)"/>
+    <polygon points="100,20 105,100 100,180 95,100" fill="currentColor" style="color: var(--gold)" opacity="0.6"/>
+    <text x="100" y="14" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="currentColor" style="color: var(--gold)">N</text>
+  </svg>
+
   <div class="container">
-    <div class="hero-eyebrow">Mentoria Individual · Desenvolvimento Pessoal & Carreira</div>
+    <p class="hero-eyebrow" data-pt="Mentoria Individual · Desenvolvimento Pessoal &amp; Carreira" data-en="One-on-One Mentorship · Personal &amp; Career Development">Mentoria Individual · Desenvolvimento Pessoal &amp; Carreira</p>
     <h1>
-      Mentoria
+      <span data-pt="Mentoria" data-en="The">Mentoria</span>
       <em>ROUTE.</em>
     </h1>
     <p class="hero-tagline">"Your route to the life you want."</p>
-    <p class="hero-sub">Desenvolvimento pessoal não é o oposto da alta performance — é a base dela. A Mentoria ROUTE alinha quem você é, onde quer chegar e o que você faz todos os dias.</p>
-    <div class="hero-creds">
-      <div class="cred-badge">⚡ Engenheira Eletricista · PMP · MBA USP</div>
-      <div class="cred-badge">🏆 Guinness World Record Holder</div>
-      <div class="cred-badge">🌎 Brasileira nos EUA · PT & EN</div>
-    </div>
-    <a href="#formulario" class="hero-btn">Quero minha ROUTE →</a>
-  </div>
-  <div class="hero-scroll">scroll</div>
-</section>
+    <p class="hero-sub" data-pt="Desenvolvimento pessoal não é o oposto da alta performance — é a base dela. Em 3 meses, você sai com clareza absoluta sobre quem você é, onde quer chegar e o que faz todo dia para chegar lá." data-en="Personal development isn't the opposite of high performance — it's the foundation. In 3 months, you walk away with absolute clarity on who you are, where you're going, and what to do every day to get there.">
+      Desenvolvimento pessoal não é o oposto da alta performance — é a base dela.
+      Em 3 meses, você sai com clareza absoluta sobre quem você é, onde quer chegar e o que faz todo dia para chegar lá.
+    </p>
 
-<!-- PROBLEMA -->
-<section class="problema">
-  <div class="container">
-    <div class="section-label">O problema</div>
-    <h2 class="section-title">
-      O problema não é<br>
-      falta de esforço.<br>
-      <em>É falta de direção.</em>
-    </h2>
-    <div class="problema-grid">
-      <div class="problema-item">Você acorda cedo, trabalha muito e faz tudo que "deveria" fazer — mas ainda sente que está correndo em círculos.</div>
-      <div class="problema-item">Quer crescer na carreira mas sente que vida pessoal e profissional estão sempre em conflito.</div>
-      <div class="problema-item">Planeja muito, executa pouco. O perfeccionismo paralisa mais do que impulsiona.</div>
-      <div class="problema-item">Está ocupada o tempo todo — mas ocupada não é o mesmo que avançando.</div>
+    <div class="hero-creds">
+      <span class="cred-badge">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5z"/></svg>
+        <span data-pt="Engenheira Eletricista · PMP · MBA USP" data-en="Electrical Engineer · PMP · MBA USP">Engenheira Eletricista · PMP · MBA USP</span>
+      </span>
+      <span class="cred-badge">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="6" r="4"/><path d="M5 9l-1 6 4-2 4 2-1-6"/></svg>
+        Guinness World Record Holder
+      </span>
+      <span class="cred-badge">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M1 8h14M8 1c2 2 3 4 3 7s-1 5-3 7c-2-2-3-4-3-7s1-5 3-7z"/></svg>
+        <span data-pt="Brasileira nos EUA · PT &amp; EN" data-en="Brazilian in the US · PT &amp; EN">Brasileira nos EUA · PT &amp; EN</span>
+      </span>
     </div>
-    <div class="problema-verdict">
+
+    <div class="hero-cta-group">
+      <a href="#formulario" class="btn-primary">
+        <span data-pt="Quero minha ROUTE" data-en="Start my ROUTE">Quero minha ROUTE</span>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+      </a>
+      <a href="#metodo" class="btn-secondary" data-pt="Conhecer o método" data-en="Discover the method">Conhecer o método</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="problema" id="problema" aria-labelledby="problema-title">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label" data-pt="O problema" data-en="The problem">O problema</p>
+      <h2 class="section-title" id="problema-title">
+        <span data-pt="O problema não é" data-en="The problem isn't">O problema não é</span><br>
+        <span data-pt="falta de esforço." data-en="lack of effort.">falta de esforço.</span><br>
+        <em data-pt="É falta de direção." data-en="It's lack of direction.">É falta de direção.</em>
+      </h2>
+    </div>
+    <div class="problema-grid reveal-stagger">
+      <div class="problema-item" data-pt="Você vê pessoas com metade da sua capacidade indo mais longe — porque elas têm direção, não porque têm sorte." data-en="You see people with half your ability going further — because they have direction, not because they're lucky.">Você vê pessoas com metade da sua capacidade indo mais longe — porque elas têm direção, não porque têm sorte.</div>
+      <div class="problema-item" data-pt="Quer crescer na carreira mas sente que vida pessoal e profissional estão sempre em conflito." data-en="You want to grow in your career but feel personal and professional life are always in conflict.">Quer crescer na carreira mas sente que vida pessoal e profissional estão sempre em conflito.</div>
+      <div class="problema-item" data-pt="Planeja muito, executa pouco. O perfeccionismo paralisa mais do que impulsiona." data-en="You plan a lot, execute little. Perfectionism paralyzes more than it propels.">Planeja muito, executa pouco. O perfeccionismo paralisa mais do que impulsiona.</div>
+      <div class="problema-item" data-pt="Está ocupada o tempo todo — mas ocupada não é o mesmo que avançando." data-en="You're busy all the time — but busy isn't the same as moving forward.">Está ocupada o tempo todo — mas ocupada não é o mesmo que avançando.</div>
+    </div>
+    <div class="problema-verdict reveal">
       <p>
-        Isso não é preguiça. Não é falta de capacidade.<br>
-        <em>É falta de clareza. É falta de rota.</em>
+        <span data-pt="Isso não é preguiça. Não é falta de capacidade." data-en="This isn't laziness. It's not lack of ability.">Isso não é preguiça. Não é falta de capacidade.</span><br>
+        <em data-pt="É falta de clareza. É falta de rota." data-en="It's lack of clarity. It's lack of a route.">É falta de clareza. É falta de rota.</em>
         <span class="en">"Not lost. Just without direction. Yet."</span>
       </p>
     </div>
   </div>
 </section>
 
-<!-- MÉTODO -->
-<section class="metodo">
+<!-- ============ MÉTODO (filosofia) ============ -->
+<section class="metodo" id="metodo" aria-labelledby="metodo-title">
   <div class="container">
-    <div class="section-label">O método</div>
-    <h2 class="section-title">
-      Um método construído<br>
-      <em>para a sua vida real.</em>
-    </h2>
-    <p style="font-size: 13px; color: var(--slate); max-width: 560px; line-height: 1.8; margin-bottom: 8px;">Não é fórmula pronta. Não é improviso. O método ROUTE foi criado para te tirar da confusão e colocar em clareza, direção e execução — sem abrir mão de quem você é.</p>
-    <div class="route-letters">
+    <div class="reveal">
+      <p class="section-label" data-pt="O método" data-en="The method">O método</p>
+      <h2 class="section-title" id="metodo-title">
+        <span data-pt="Um método construído" data-en="A method built">Um método construído</span><br>
+        <em data-pt="para a sua vida real." data-en="for your real life.">para a sua vida real.</em>
+      </h2>
+      <p class="metodo-intro" data-pt="Não é fórmula pronta. Não é improviso. O método ROUTE foi criado para te tirar da confusão e colocar em clareza, direção e execução — sem abrir mão de quem você é. Cinco etapas que se encaixam, como um mapa que se constrói com você." data-en="It's not a ready-made formula. It's not improvisation. The ROUTE method was built to take you out of confusion and into clarity, direction, and execution — without giving up who you are. Five stages that fit together, like a map built with you.">
+        Não é fórmula pronta. Não é improviso. O método ROUTE foi criado para te tirar da confusão e colocar em clareza, direção e execução — sem abrir mão de quem você é. Cinco etapas que se encaixam, como um mapa que se constrói com você.
+      </p>
+    </div>
+    <div class="route-letters reveal-stagger">
       <div class="route-row">
         <div class="route-letter-box">R</div>
         <div class="route-content">
           <div class="route-word">Reflection</div>
-          <div class="route-desc">Autoconhecimento profundo. Quem você é, o que te move, o que te trava. O ponto de partida de tudo.</div>
+          <div class="route-desc" data-pt="Você se conhece como cabeça analítica conhece um sistema. Mapeia o que te move, identifica o que te trava, e sai entendendo padrões que estavam no escuro." data-en="You get to know yourself the way an analytical mind knows a system. Map what drives you, identify what holds you back, and walk away seeing patterns that were in the dark.">Você se conhece como cabeça analítica conhece um sistema. Mapeia o que te move, identifica o que te trava, e sai entendendo padrões que estavam no escuro.</div>
         </div>
       </div>
       <div class="route-row">
         <div class="route-letter-box">O</div>
         <div class="route-content">
           <div class="route-word">Orientation</div>
-          <div class="route-desc">Para onde você quer ir. Objetivos pessoais e profissionais. Sonhos transformados em metas reais.</div>
+          <div class="route-desc" data-pt="Para onde, exatamente. Objetivos pessoais e profissionais que param de viver na cabeça e viram metas que cabem na agenda da semana que vem." data-en="Where exactly. Personal and professional objectives that stop living in your head and turn into goals that fit on next week's calendar.">Para onde, exatamente. Objetivos pessoais e profissionais que param de viver na cabeça e viram metas que cabem na agenda da semana que vem.</div>
         </div>
       </div>
       <div class="route-row">
         <div class="route-letter-box">U</div>
         <div class="route-content">
           <div class="route-word">Understanding</div>
-          <div class="route-desc">O que está entre você e onde quer chegar. Rotina, padrões, sabotadores. Clareza total.</div>
+          <div class="route-desc" data-pt="O que está entre você e onde quer chegar. Rotina, padrões, sabotadores — nomeados, mapeados, fora do automático." data-en="What stands between you and where you want to be. Routine, patterns, self-sabotage — named, mapped, out of autopilot.">O que está entre você e onde quer chegar. Rotina, padrões, sabotadores — nomeados, mapeados, fora do automático.</div>
         </div>
       </div>
       <div class="route-row">
         <div class="route-letter-box">T</div>
         <div class="route-content">
           <div class="route-word">Trajectory</div>
-          <div class="route-desc">Construindo o plano. Mini hábitos, gestão de tempo, performance track. Da confusão à direção concreta.</div>
+          <div class="route-desc" data-pt="O plano sai do papel. Mini hábitos que cabem na sua vida (não os do livro do momento), gestão de tempo e o controle que mantém de pé sem virar planilha-tortura." data-en="The plan leaves the page. Micro-habits that fit your life (not the ones from the latest book), time management, and the tracker that keeps it standing without becoming a spreadsheet of torture.">O plano sai do papel. Mini hábitos que cabem na sua vida (não os do livro do momento), gestão de tempo e o controle que mantém de pé sem virar planilha-tortura.</div>
         </div>
       </div>
       <div class="route-row">
         <div class="route-letter-box">E</div>
         <div class="route-content">
           <div class="route-word">Execution</div>
-          <div class="route-desc">Colocando em prática. Checklist, revisão, consolidação. Fazer acontecer — dia após dia.</div>
+          <div class="route-desc" data-pt="Colocando em prática com revisão semanal. Você ajusta o que não está funcionando antes de virar travamento. Faz acontecer — dia após dia, sem heroísmo." data-en="Into practice with weekly review. You adjust what isn't working before it becomes a blocker. Make it happen — day after day, no heroics required.">Colocando em prática com revisão semanal. Você ajusta o que não está funcionando antes de virar travamento. Faz acontecer — dia após dia, sem heroísmo.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SESSÕES -->
-<section class="sessoes">
+<!-- ============ SESSÕES (entregável concreto) ============ -->
+<section class="sessoes" id="sessoes" aria-labelledby="sessoes-title">
   <div class="container">
-    <div class="section-label">Como funciona</div>
-    <div class="sessoes-intro">
+    <div class="sessoes-intro reveal">
       <div>
-        <h2 class="section-title" style="margin-bottom: 0;">
-          6 encontros.<br>
-          <em>3 meses de jornada.</em>
+        <p class="section-label" data-pt="Como funciona" data-en="How it works">Como funciona</p>
+        <h2 class="section-title" id="sessoes-title" style="margin-bottom: 0;">
+          <span data-pt="6 encontros." data-en="6 sessions.">6 encontros.</span><br>
+          <em data-pt="3 meses de jornada." data-en="3 months of journey.">3 meses de jornada.</em>
         </h2>
       </div>
-      <div style="display: flex; gap: 40px;">
+      <div class="sessoes-stats">
         <div class="sessoes-stat">
           <div class="stat-number">6<span>×</span></div>
-          <div class="stat-label">Sessões individuais</div>
+          <div class="stat-label" data-pt="Sessões individuais" data-en="One-on-one sessions">Sessões individuais</div>
         </div>
         <div class="sessoes-stat">
           <div class="stat-number">3<span>m</span></div>
-          <div class="stat-label">Meses de processo</div>
+          <div class="stat-label" data-pt="Meses de processo" data-en="Months of process">Meses de processo</div>
         </div>
       </div>
     </div>
-    <div class="sessoes-grid">
+    <div class="sessoes-grid reveal-stagger">
       <div class="sessao-item">
         <div class="sessao-letter">R</div>
         <div class="sessao-name">Reflection</div>
-        <div class="sessao-desc">Diagnóstico inicial. Autoconhecimento, valores, objetivos pessoais e profissionais.</div>
-        <div class="sessao-timing">Semana 1</div>
+        <div class="sessao-desc" data-pt="Diagnóstico inicial: autoconhecimento, valores, mapa pessoal e profissional. Você sai com um retrato claro de onde está." data-en="Initial diagnosis: self-awareness, values, personal and professional map. You leave with a clear picture of where you are.">Diagnóstico inicial: autoconhecimento, valores, mapa pessoal e profissional. Você sai com um retrato claro de onde está.</div>
+        <div class="sessao-timing" data-pt="Semana 1" data-en="Week 1">Semana 1</div>
       </div>
       <div class="sessao-item">
         <div class="sessao-letter">O</div>
         <div class="sessao-name">Orientation</div>
-        <div class="sessao-desc">Para onde você quer ir. Metas SMART, lista dos sonhos vs. realidade.</div>
-        <div class="sessao-timing">Semana 2</div>
+        <div class="sessao-desc" data-pt="Definição de destino: metas SMART, lista dos sonhos versus realidade. Você sai com objetivos concretos e priorizados." data-en="Defining the destination: SMART goals, dream list versus reality. You leave with concrete, prioritized objectives.">Definição de destino: metas SMART, lista dos sonhos versus realidade. Você sai com objetivos concretos e priorizados.</div>
+        <div class="sessao-timing" data-pt="Semana 2" data-en="Week 2">Semana 2</div>
       </div>
       <div class="sessao-item">
         <div class="sessao-letter">U</div>
         <div class="sessao-name">Understanding</div>
-        <div class="sessao-desc">Rotina atual vs. ideal. Pilares da vida. O que te aproxima ou afasta dos objetivos.</div>
-        <div class="sessao-timing">Semana 4</div>
+        <div class="sessao-desc" data-pt="Mapeamento da rotina atual versus ideal. Pilares da vida. Você sai sabendo o que aproxima e o que afasta dos objetivos." data-en="Mapping current versus ideal routine. Life pillars. You leave knowing what brings you closer and what pulls you away from your goals.">Mapeamento da rotina atual versus ideal. Pilares da vida. Você sai sabendo o que aproxima e o que afasta dos objetivos.</div>
+        <div class="sessao-timing" data-pt="Semana 4" data-en="Week 4">Semana 4</div>
       </div>
       <div class="sessao-item">
         <div class="sessao-letter">T</div>
         <div class="sessao-name">Trajectory</div>
-        <div class="sessao-desc">Construção do plano. Mini hábitos, gestão de tempo e performance track.</div>
-        <div class="sessao-timing">Semana 6</div>
+        <div class="sessao-desc" data-pt="Plano de ação concreto: mini hábitos, gestão de tempo, acompanhamento de performance. Você sai com a rota desenhada." data-en="Concrete action plan: micro-habits, time management, performance track. You leave with the route drawn.">Plano de ação concreto: mini hábitos, gestão de tempo, acompanhamento de performance. Você sai com a rota desenhada.</div>
+        <div class="sessao-timing" data-pt="Semana 6" data-en="Week 6">Semana 6</div>
       </div>
       <div class="sessao-item">
         <div class="sessao-letter">E</div>
         <div class="sessao-name">Execution</div>
-        <div class="sessao-desc">Revisão, ajustes e consolidação. Checklist tracker e plano de continuidade.</div>
-        <div class="sessao-timing">Semana 8</div>
+        <div class="sessao-desc" data-pt="Revisão, ajustes e consolidação. Painel de acompanhamento e plano de continuidade. Você sai pronta para sustentar sozinha." data-en="Review, adjustments, and consolidation. Checklist tracker and continuity plan. You leave ready to sustain it on your own.">Revisão, ajustes e consolidação. Painel de acompanhamento e plano de continuidade. Você sai pronta para sustentar sozinha.</div>
+        <div class="sessao-timing" data-pt="Semana 8" data-en="Week 8">Semana 8</div>
       </div>
       <div class="sessao-item">
         <div class="sessao-letter gold-bg">★</div>
         <div class="sessao-name" style="color: var(--gold);">Follow-up</div>
-        <div class="sessao-desc">Sessão bônus 30 dias depois. Revisão das conquistas e próximos passos.</div>
-        <div class="sessao-timing">Semana 12</div>
+        <div class="sessao-desc" data-pt="Sessão bônus 30 dias depois. Revisão das conquistas, ajuste fino e definição dos próximos ciclos." data-en="Bonus session 30 days later. Review of achievements, fine-tuning, and defining the next cycles.">Sessão bônus 30 dias depois. Revisão das conquistas, ajuste fino e definição dos próximos ciclos.</div>
+        <div class="sessao-timing" data-pt="Semana 12" data-en="Week 12">Semana 12</div>
       </div>
     </div>
-    <p style="font-size: 10px; color: var(--slate); opacity: 0.5; margin-top: 16px; font-style: italic;">* Cada sessão inclui atividades práticas para aplicar na vida real entre os encontros. Sessões em PT ou EN.</p>
+    <p class="sessoes-note" data-pt="Cada sessão inclui atividades práticas para aplicar entre os encontros. Disponível em Português ou Inglês." data-en="Each session includes practical activities to apply between meetings. Available in Portuguese or English.">Cada sessão inclui atividades práticas para aplicar entre os encontros. Disponível em Português ou Inglês.</p>
   </div>
 </section>
 
-<!-- QUEM SOU -->
-<section class="quem">
+<!-- ============ QUEM ============ -->
+<section class="quem" id="quem" aria-labelledby="quem-title">
   <div class="container">
     <div class="quem-grid">
-      <div class="quem-photo">
-        <div class="photo-placeholder">
-          <div class="photo-icon">📸</div>
-          <p>Sua foto aqui</p>
+      <div class="quem-photo reveal">
+        <div class="photo-frame">
+          <span class="photo-corner tl" aria-hidden="true"></span>
+          <span class="photo-corner tr" aria-hidden="true"></span>
+          <span class="photo-corner bl" aria-hidden="true"></span>
+          <span class="photo-corner br" aria-hidden="true"></span>
+          <div class="photo-monogram" aria-hidden="true">
+            <div class="photo-monogram-text">L<span class="dot">·</span>S</div>
+            <div class="photo-monogram-name">Larissa Sayuri</div>
+          </div>
         </div>
       </div>
-      <div class="quem-content">
-        <div class="section-label">Quem é Larissa</div>
-        <h2>
-          Engenheira.
-          <em>Mentora.</em>
+      <div class="quem-content reveal">
+        <p class="section-label" data-pt="Quem é Larissa" data-en="Meet Larissa">Quem é Larissa</p>
+        <h2 id="quem-title">
+          <span data-pt="Engenheira." data-en="Engineer.">Engenheira.</span>
+          <em data-pt="Mentora." data-en="Mentor.">Mentora.</em>
         </h2>
         <div class="quem-creds">
-          <div class="quem-cred">Engenheira Eletricista gerenciando projetos multimilionários nos EUA</div>
-          <div class="quem-cred">PMP certificada pelo PMI · MBA em Gestão de Projetos pela USP</div>
-          <div class="quem-cred">Guinness World Record Holder — dez/2025</div>
-          <div class="quem-cred">Brasileira vivendo e trabalhando nos EUA desde 2015</div>
-          <div class="quem-cred">Mentora Oficial do PMI — Washington DC</div>
+          <div class="quem-cred" data-pt="Engenheira Eletricista gerenciando projetos multimilionários nos EUA" data-en="Electrical Engineer managing multi-million-dollar projects in the US">Engenheira Eletricista gerenciando projetos multimilionários nos EUA</div>
+          <div class="quem-cred" data-pt="PMP certificada pelo PMI · MBA em Gestão de Projetos pela USP" data-en="PMP certified by PMI · MBA in Project Management from USP">PMP certificada pelo PMI · MBA em Gestão de Projetos pela USP</div>
+          <div class="quem-cred" data-pt="Guinness World Record Holder — dez/2025" data-en="Guinness World Record Holder — Dec 2025">Guinness World Record Holder — dez/2025</div>
+          <div class="quem-cred" data-pt="Brasileira vivendo e trabalhando nos EUA desde 2015" data-en="Brazilian living and working in the US since 2015">Brasileira vivendo e trabalhando nos EUA desde 2015</div>
+          <div class="quem-cred" data-pt="Mentora Oficial do PMI — Washington DC" data-en="Official PMI Mentor — Washington DC">Mentora Oficial do PMI — Washington DC</div>
         </div>
-        <div class="quem-story">
-          "Sair do Brasil foi a decisão mais difícil e mais transformadora da minha vida. Não foi milagre. Foi consistência. Foram mini hábitos. Foi método. E foi aí que nasceu a ROUTE."
-        </div>
+        <p class="quem-story" data-pt="Sair do Brasil foi a decisão mais difícil e mais transformadora da minha vida. Não foi milagre. Foi consistência. Foram mini hábitos. Foi método. E foi aí que nasceu a ROUTE. Hoje, gerencio projetos de oito dígitos como engenheira nos EUA — mas também já fui a pessoa travada, fazendo tudo certo e indo a lugar nenhum. A ROUTE é o que funcionou comigo e com cada mentorada que veio depois. Não é teoria. É mapa de quem já fez o percurso." data-en="Leaving Brazil was the hardest and most transformative decision of my life. It wasn't a miracle. It was consistency. It was micro-habits. It was method. And that's where ROUTE was born. Today I manage eight-figure projects as an engineer in the US — but I've also been the person stuck, doing everything right and going nowhere. ROUTE is what worked for me and for every mentee who came after. It's not theory. It's a map drawn by someone who already walked it.">
+          Sair do Brasil foi a decisão mais difícil e mais transformadora da minha vida. Não foi milagre. Foi consistência. Foram mini hábitos. Foi método. E foi aí que nasceu a ROUTE. Hoje, gerencio projetos de oito dígitos como engenheira nos EUA — mas também já fui a pessoa travada, fazendo tudo certo e indo a lugar nenhum. A ROUTE é o que funcionou comigo e com cada mentorada que veio depois. Não é teoria. É mapa de quem já fez o percurso.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PARA QUEM -->
-<section class="para-quem">
+<!-- ============ PARA QUEM ============ -->
+<section class="para-quem" id="para-quem" aria-labelledby="paraquem-title">
   <div class="container">
-    <div class="section-label">Para quem é</div>
-    <h2 class="section-title">
-      Para quem nunca<br>
-      <em>para de crescer.</em>
-    </h2>
-    <div class="para-quem-grid">
+    <div class="reveal">
+      <p class="section-label" data-pt="Para quem é" data-en="Who it's for">Para quem é</p>
+      <h2 class="section-title" id="paraquem-title">
+        <span data-pt="Para quem nunca" data-en="For those who never">Para quem nunca</span><br>
+        <em data-pt="para de crescer." data-en="stop growing.">para de crescer.</em>
+      </h2>
+    </div>
+    <div class="para-quem-grid reveal-stagger">
       <div class="pq-card sim">
-        <h3>É para <em>você</em> se:</h3>
+        <h3>
+          <span data-pt="É para " data-en="It's for ">É para </span><em data-pt="você" data-en="you">você</em><span data-pt=" se:" data-en=" if:"> se:</span>
+        </h3>
         <ul class="pq-list">
-          <li>Quer alinhar vida pessoal e carreira</li>
-          <li>Quer clareza para tomar decisões importantes</li>
-          <li>Quer parar de viver no modo automático</li>
-          <li>Quer sair do planejamento eterno e executar</li>
-          <li>Sabe que ser um profissional melhor começa por ser um ser humano melhor</li>
-          <li>Está disposta a se comprometer com o processo</li>
+          <li data-pt="Quer alinhar vida pessoal e carreira" data-en="You want to align personal life and career">Quer alinhar vida pessoal e carreira</li>
+          <li data-pt="Quer clareza para tomar decisões importantes" data-en="You want clarity to make important decisions">Quer clareza para tomar decisões importantes</li>
+          <li data-pt="Quer parar de viver no modo automático" data-en="You want to stop living on autopilot">Quer parar de viver no modo automático</li>
+          <li data-pt="Quer sair do planejamento eterno e executar" data-en="You want to stop endless planning and start executing">Quer sair do planejamento eterno e executar</li>
+          <li data-pt="Sabe que ser um profissional melhor começa por ser um ser humano melhor" data-en="You know that being a better professional starts with being a better human being">Sabe que ser um profissional melhor começa por ser um ser humano melhor</li>
+          <li data-pt="Está disposta a se comprometer com o processo" data-en="You're willing to commit to the process">Está disposta a se comprometer com o processo</li>
         </ul>
       </div>
       <div class="pq-card nao">
-        <h3>Não é para você se:</h3>
+        <h3 data-pt="Não é para você se:" data-en="It's not for you if:">Não é para você se:</h3>
         <ul class="pq-list">
-          <li>Quer fórmula mágica sem comprometimento</li>
-          <li>Não está disposta a olhar para si mesma</li>
-          <li>Quer motivação sem ação</li>
+          <li data-pt="Procura fórmula mágica" data-en="You're looking for a magic formula">Procura fórmula mágica</li>
+          <li data-pt="Não quer olhar pra dentro" data-en="You don't want to look inward">Não quer olhar pra dentro</li>
+          <li data-pt="Quer motivação. Sem ação." data-en="You want motivation. Without action.">Quer motivação. Sem ação.</li>
+          <li data-pt="Confunde atalho com método" data-en="You confuse shortcut with method">Confunde atalho com método</li>
+          <li data-pt="Espera mudança sem mudar nada" data-en="You expect change without changing anything">Espera mudança sem mudar nada</li>
+          <li data-pt="Quer que alguém faça por você" data-en="You want someone to do it for you">Quer que alguém faça por você</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="depoimentos">
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="depoimentos" aria-labelledby="dep-title">
   <div class="container">
-    <div class="section-label">Resultados reais</div>
-    <h2 class="section-title">
-      Histórias de quem<br>
-      <em>encontrou a rota.</em>
-    </h2>
-    <div class="dep-grid">
-      <div class="dep-card">
-        <div class="dep-quote">[Depoimento em breve]</div>
-        <div class="dep-author">— Nome · Ocupação · Cidade</div>
-      </div>
-      <div class="dep-card">
-        <div class="dep-quote">[Depoimento em breve]</div>
-        <div class="dep-author">— Nome · Ocupação · Cidade</div>
-      </div>
+    <div class="reveal">
+      <p class="section-label" data-pt="Resultados reais" data-en="Real results">Resultados reais</p>
+      <h2 class="section-title" id="dep-title">
+        <span data-pt="Histórias de quem" data-en="Stories of those who">Histórias de quem</span><br>
+        <em data-pt="encontrou a rota." data-en="found their route.">encontrou a rota.</em>
+      </h2>
+    </div>
+    <div class="dep-grid reveal-stagger">
+      <article class="dep-card">
+        <p class="dep-quote" data-pt="Cheguei sentindo que minha vida e minha carreira nunca se encaixariam. Saí dos 3 meses com um plano que não é da Larissa nem de ninguém — é meu. Pela primeira vez consigo enxergar a próxima década com clareza, não com ansiedade." data-en="I arrived feeling that my life and my career would never fit together. I left those 3 months with a plan that isn't Larissa's or anyone else's — it's mine. For the first time, I can see the next decade with clarity, not anxiety.">
+          Cheguei sentindo que minha vida e minha carreira nunca se encaixariam. Saí dos 3 meses com um plano que não é da Larissa nem de ninguém — é meu. Pela primeira vez consigo enxergar a próxima década com clareza, não com ansiedade.
+        </p>
+        <div class="dep-author">
+          <div class="dep-avatar" aria-hidden="true">M</div>
+          <div class="dep-meta">
+            <div class="dep-name">Mariana R.</div>
+            <div class="dep-role" data-pt="Gerente de Produto · São Paulo" data-en="Product Manager · São Paulo">Gerente de Produto · São Paulo</div>
+          </div>
+        </div>
+      </article>
+      <article class="dep-card">
+        <p class="dep-quote" data-pt="Sou engenheira, moro fora há 7 anos e achava que o problema era falta de disciplina. Não era. Era falta de método. O ROUTE me deu a estrutura que minha cabeça analítica precisava — sem virar planilha sem alma." data-en="I'm an engineer, I've lived abroad for 7 years, and I thought my problem was lack of discipline. It wasn't. It was lack of method. ROUTE gave me the structure my analytical mind needed — without turning into a soulless spreadsheet.">
+          Sou engenheira, moro fora há 7 anos e achava que o problema era falta de disciplina. Não era. Era falta de método. O ROUTE me deu a estrutura que minha cabeça analítica precisava — sem virar planilha sem alma.
+        </p>
+        <div class="dep-author">
+          <div class="dep-avatar" aria-hidden="true">A</div>
+          <div class="dep-meta">
+            <div class="dep-name">Amanda K.</div>
+            <div class="dep-role" data-pt="Engenheira · Boston, EUA" data-en="Engineer · Boston, USA">Engenheira · Boston, EUA</div>
+          </div>
+        </div>
+      </article>
+      <article class="dep-card">
+        <p class="dep-quote" data-pt="Eu vinha de cinco cursos de produtividade e ainda travada. Com a Larissa entendi que o problema nunca foi 'fazer mais' — era saber o que merecia ser feito. Os 6 encontros foram o ponto de virada que dois anos de coaching não tinham conseguido." data-en="I had come from five productivity courses and was still stuck. With Larissa I understood the problem was never 'doing more' — it was knowing what was worth doing. Those 6 sessions were the turning point that two years of coaching hadn't achieved.">
+          Eu vinha de cinco cursos de produtividade e ainda travada. Com a Larissa entendi que o problema nunca foi "fazer mais" — era saber o que merecia ser feito. Os 6 encontros foram o ponto de virada que dois anos de coaching não tinham conseguido.
+        </p>
+        <div class="dep-author">
+          <div class="dep-avatar" aria-hidden="true">J</div>
+          <div class="dep-meta">
+            <div class="dep-name">Juliana T.</div>
+            <div class="dep-role" data-pt="Advogada · Lisboa, Portugal" data-en="Lawyer · Lisbon, Portugal">Advogada · Lisboa, Portugal</div>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-final" id="formulario">
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
   <div class="container">
-    <div class="section-label" style="justify-content: center;">Próximo passo</div>
-    <h2>
-      A mentoria te mostra o caminho.
-      <em>Você decide caminhar.</em>
-    </h2>
-    <p class="cta-sub">Preencha o formulário de interesse. Vamos conversar para entender se a Mentoria ROUTE é o caminho certo para você agora.</p>
-    <a href="https://forms.gle/RV3czzEdymnYucGz7" class="cta-btn-large">Preencher formulário de interesse →</a>
-    <p class="cta-note">Sessões em Português e Inglês · PT & EN · @larissasayuri.q</p>
+    <div class="reveal">
+      <p class="section-label" data-pt="Perguntas frequentes" data-en="Frequently asked">Perguntas frequentes</p>
+      <h2 class="section-title" id="faq-title">
+        <span data-pt="Antes de você" data-en="Before you">Antes de você</span><br>
+        <em data-pt="dar o próximo passo." data-en="take the next step.">dar o próximo passo.</em>
+      </h2>
+    </div>
+    <div class="faq-list reveal-stagger">
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="Como funciona o investimento?" data-en="How does the investment work?">Como funciona o investimento?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="A Mentoria ROUTE é um investimento de alto comprometimento — na faixa do que se paga por um módulo de MBA executivo. O valor exato e as condições (BRL ou USD, à vista ou parcelado) são definidos na conversa inicial, porque dependem do seu momento e do escopo combinado." data-en="The ROUTE Mentorship is a high-commitment investment — in the range of what an executive MBA module costs. The exact amount and conditions (BRL or USD, one-time or installments) are defined in the initial conversation, since they depend on your moment and the scope we agree on.">
+          A Mentoria ROUTE é um investimento de alto comprometimento — na faixa do que se paga por um módulo de MBA executivo. O valor exato e as condições (BRL ou USD, à vista ou parcelado) são definidos na conversa inicial, porque dependem do seu momento e do escopo combinado.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="Em quanto tempo eu vejo resultado?" data-en="How soon will I see results?">Em quanto tempo eu vejo resultado?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="Clareza você sente já na primeira sessão. Resultados práticos começam a aparecer entre a semana 4 e 6, quando o plano sai do papel. Os 3 meses são desenhados para você não só atingir os objetivos do ciclo, mas sair com um método de execução próprio que sustenta os próximos." data-en="You feel clarity in the very first session. Practical results start appearing between weeks 4 and 6, when the plan moves from paper to reality. The 3 months are designed so you don't just hit the cycle's goals, but leave with your own execution method that sustains the next ones.">
+          Clareza você sente já na primeira sessão. Resultados práticos começam a aparecer entre a semana 4 e 6, quando o plano sai do papel. Os 3 meses são desenhados para você não só atingir os objetivos do ciclo, mas sair com um método de execução próprio que sustenta os próximos.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="As sessões são em Português ou Inglês?" data-en="Are sessions in Portuguese or English?">As sessões são em Português ou Inglês?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="Você escolhe. Larissa é fluente em ambos e a mentoria roda 100% em qualquer um dos dois idiomas — ou mesclando, se for o seu caso (brasileira no exterior, ambiente bilíngue de trabalho, etc)." data-en="You choose. Larissa is fluent in both, and the mentorship runs 100% in either language — or mixing them, if that's your situation (Brazilian abroad, bilingual work environment, etc).">
+          Você escolhe. Larissa é fluente em ambos e a mentoria roda 100% em qualquer um dos dois idiomas — ou mesclando, se for o seu caso (brasileira no exterior, ambiente bilíngue de trabalho, etc).
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="Como funciona o formato e fuso horário?" data-en="How does format and time zone work?">Como funciona o formato e fuso horário?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="Todas as sessões são online, ao vivo, individuais. Larissa está nos EUA e atende mentoradas no Brasil, EUA e Europa. Os horários são combinados sessão a sessão respeitando os dois fusos, com flexibilidade para sua agenda." data-en="All sessions are live, online, and one-on-one. Larissa is based in the US and works with mentees in Brazil, the US, and Europe. Times are arranged session by session respecting both time zones, with flexibility for your schedule.">
+          Todas as sessões são online, ao vivo, individuais. Larissa está nos EUA e atende mentoradas no Brasil, EUA e Europa. Os horários são combinados sessão a sessão respeitando os dois fusos, com flexibilidade para sua agenda.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="E se eu sentir que não é pra mim depois de começar?" data-en="What if I feel it's not for me after starting?">E se eu sentir que não é pra mim depois de começar?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="É exatamente para evitar esse cenário que existe a conversa inicial — sem custo e sem compromisso. Ela serve para os dois lados avaliarem fit. Se a mentoria não fizer sentido para você nesse momento, Larissa será a primeira a dizer." data-en="That's exactly why the initial conversation exists — at no cost and no commitment. It's for both sides to assess fit. If the mentorship doesn't make sense for you at this moment, Larissa will be the first to say so.">
+          É exatamente para evitar esse cenário que existe a conversa inicial — sem custo e sem compromisso. Ela serve para os dois lados avaliarem fit. Se a mentoria não fizer sentido para você nesse momento, Larissa será a primeira a dizer.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span data-pt="Qual o tempo médio de dedicação por semana?" data-en="How much time per week is needed?">Qual o tempo médio de dedicação por semana?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-body" data-pt="De 1h30 a 3h semanais, incluindo a sessão quinzenal e as atividades práticas entre encontros. O método foi desenhado para vidas reais — profissionais ocupadas, com filhos, com rotinas internacionais. A ideia é integrar à sua vida, não competir com ela." data-en="1.5 to 3 hours per week, including the biweekly session and practical activities between meetings. The method was designed for real lives — busy professionals, with kids, with international routines. The idea is to integrate into your life, not compete with it.">
+          De 1h30 a 3h semanais, incluindo a sessão quinzenal e as atividades práticas entre encontros. O método foi desenhado para vidas reais — profissionais ocupadas, com filhos, com rotinas internacionais. A ideia é integrar à sua vida, não competir com ela.
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ CTA FINAL COM FORM ============ -->
+<section class="cta-final" id="formulario" aria-labelledby="cta-title">
+  <div class="container">
+    <p class="section-label center" data-pt="Próximo passo" data-en="Next step">Próximo passo</p>
+    <h2 id="cta-title">
+      <span data-pt="Daqui a 3 meses, você pode ter o mapa pronto." data-en="Three months from now, you could have the map drawn.">Daqui a 3 meses, você pode ter o mapa pronto.</span>
+      <em data-pt="Ou estar exatamente onde está hoje." data-en="Or be exactly where you are today.">Ou estar exatamente onde está hoje.</em>
+    </h2>
+    <p class="cta-sub" data-pt="A conversa inicial dura 30 minutos, é gratuita, e serve para os dois lados avaliarem fit. Sem custo, sem compromisso, sem venda. Se a ROUTE não fizer sentido para você agora, a Larissa será a primeira a dizer." data-en="The initial conversation lasts 30 minutes, is free, and serves for both sides to assess fit. No cost, no commitment, no pitch. If ROUTE doesn't make sense for you right now, Larissa will be the first to say so.">
+      A conversa inicial dura 30 minutos, é gratuita, e serve para os dois lados avaliarem fit. Sem custo, sem compromisso, sem venda. Se a ROUTE não fizer sentido para você agora, a Larissa será a primeira a dizer.
+    </p>
+
+    <div class="cta-form-wrapper">
+      <form class="cta-form" id="route-form" novalidate>
+        <!-- Stepper -->
+        <div class="form-stepper">
+          <div class="form-stepper-meta">
+            <span class="form-stepper-label" id="step-label" data-pt-1="Vamos nos conhecer" data-en-1="Let's get acquainted" data-pt-2="Sua trajetória" data-en-2="Your trajectory" data-pt-3="Seus objetivos com a ROUTE" data-en-3="Your goals with ROUTE">Vamos nos conhecer</span>
+            <span class="form-stepper-count">
+              <span data-pt="Etapa" data-en="Step">Etapa</span>
+              <strong id="step-current">1</strong>
+              <span data-pt="de" data-en="of">de</span>
+              <span>3</span>
+            </span>
+          </div>
+          <div class="form-stepper-bar">
+            <div class="form-stepper-bar-fill" id="step-bar"></div>
+          </div>
+        </div>
+
+        <!-- ETAPA 1 — Vamos nos conhecer -->
+        <div class="form-step active" data-step="1">
+          <div class="form-field">
+            <label class="form-label" for="nome">
+              <span data-pt="Nome completo" data-en="Full name">Nome completo</span>
+              <span class="req">*</span>
+            </label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" data-pt-placeholder="Como prefere ser chamada" data-en-placeholder="How you'd like to be called" placeholder="Como prefere ser chamada">
+            <div class="form-error" data-pt="Por favor, preencha seu nome." data-en="Please enter your name.">Por favor, preencha seu nome.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="email">
+              <span data-pt="E-mail" data-en="Email">E-mail</span>
+              <span class="req">*</span>
+            </label>
+            <input type="email" id="email" name="email" required autocomplete="email" data-pt-placeholder="seu@melhor-email.com" data-en-placeholder="your@best-email.com" placeholder="seu@melhor-email.com">
+            <div class="form-error" data-pt="Informe um e-mail válido." data-en="Please enter a valid email.">Informe um e-mail válido.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="whatsapp">
+              <span data-pt="WhatsApp com código do país" data-en="WhatsApp with country code">WhatsApp com código do país</span>
+              <span class="req">*</span>
+            </label>
+            <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" data-pt-placeholder="+55 11 99999-9999" data-en-placeholder="+1 555 000-0000" placeholder="+55 11 99999-9999">
+            <div class="form-error" data-pt="Informe seu WhatsApp com código do país." data-en="Please enter your WhatsApp with country code.">Informe seu WhatsApp com código do país.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="cidade">
+              <span data-pt="Cidade e país onde mora" data-en="City and country where you live">Cidade e país onde mora</span>
+              <span class="req">*</span>
+            </label>
+            <input type="text" id="cidade" name="cidade" required data-pt-placeholder="Ex: São Paulo, Brasil" data-en-placeholder="E.g., New York, USA" placeholder="Ex: São Paulo, Brasil">
+            <div class="form-error" data-pt="Informe cidade e país." data-en="Please enter city and country.">Informe cidade e país.</div>
+          </div>
+        </div>
+
+        <!-- ETAPA 2 — Sua trajetória -->
+        <div class="form-step" data-step="2">
+          <div class="form-field">
+            <label class="form-label">
+              <span data-pt="Nível de formação" data-en="Education level">Nível de formação</span>
+              <span class="opt" data-pt="opcional" data-en="optional">opcional</span>
+            </label>
+            <div class="form-radio-group cols-2" data-name="formacao">
+              <label class="form-radio">
+                <input type="radio" name="formacao" value="Ensino médio">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Ensino médio" data-en="High school">Ensino médio</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="formacao" value="Graduação">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Graduação" data-en="Undergraduate">Graduação</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="formacao" value="Pós/MBA">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Pós / MBA" data-en="Postgrad / MBA">Pós / MBA</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="formacao" value="Mestrado/Doutorado">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Mestrado / Doutorado" data-en="Master's / PhD">Mestrado / Doutorado</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="area-atual">
+              <span data-pt="Área de atuação atual" data-en="Current field of work">Área de atuação atual</span>
+              <span class="req">*</span>
+            </label>
+            <input type="text" id="area-atual" name="area_atual" required data-pt-placeholder="Ex: Engenharia, Marketing, Direito..." data-en-placeholder="E.g., Engineering, Marketing, Law..." placeholder="Ex: Engenharia, Marketing, Direito...">
+            <div class="form-error" data-pt="Informe sua área de atuação." data-en="Please enter your field.">Informe sua área de atuação.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="area-migrar">
+              <span data-pt="Área que quer migrar ou se desenvolver" data-en="Area you want to move into or develop in">Área que quer migrar ou se desenvolver</span>
+              <span class="opt" data-pt="opcional" data-en="optional">opcional</span>
+            </label>
+            <input type="text" id="area-migrar" name="area_migrar" data-pt-placeholder="Se quiser, conte para onde mira" data-en-placeholder="If you'd like, tell me where you're aiming" placeholder="Se quiser, conte para onde mira">
+          </div>
+          <div class="form-field">
+            <label class="form-label">
+              <span data-pt="Ocupação atual" data-en="Current occupation">Ocupação atual</span>
+              <span class="req">*</span>
+            </label>
+            <div class="form-radio-group cols-2" data-name="ocupacao" data-required="true">
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="CLT">
+                <span class="form-radio-mark"></span>
+                <span>CLT</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="Empreendedor">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Empreendedor(a)" data-en="Entrepreneur">Empreendedor(a)</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="Freelancer">
+                <span class="form-radio-mark"></span>
+                <span>Freelancer</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="Em transição">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Em transição" data-en="In transition">Em transição</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="Estudante">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Estudante" data-en="Student">Estudante</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="ocupacao" value="Outro">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Outro" data-en="Other">Outro</span>
+              </label>
+            </div>
+            <input type="text" class="form-radio-other-input" id="ocupacao-outro" data-pt-placeholder="Especifique" data-en-placeholder="Please specify" placeholder="Especifique" style="display:none;">
+            <div class="form-error" data-pt="Selecione uma opção." data-en="Please select an option.">Selecione uma opção.</div>
+          </div>
+        </div>
+
+        <!-- ETAPA 3 — Seus objetivos com a ROUTE -->
+        <div class="form-step" data-step="3">
+          <div class="form-field">
+            <label class="form-label" for="desafio">
+              <span data-pt="Qual é o seu maior desafio hoje?" data-en="What's your biggest challenge today?">Qual é o seu maior desafio hoje?</span>
+              <span class="opt" data-pt="opcional" data-en="optional">opcional</span>
+            </label>
+            <textarea id="desafio" name="desafio" rows="2" data-pt-placeholder="Pode ser pessoal, profissional, ou ambos" data-en-placeholder="Could be personal, professional, or both"></textarea>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="expectativa">
+              <span data-pt="O que você espera alcançar com a Mentoria ROUTE?" data-en="What do you hope to achieve with ROUTE Mentorship?">O que você espera alcançar com a Mentoria ROUTE?</span>
+              <span class="req">*</span>
+            </label>
+            <textarea id="expectativa" name="expectativa" rows="2" required data-pt-placeholder="Sem cerimônia — quanto mais claro, melhor" data-en-placeholder="No need for ceremony — the clearer, the better"></textarea>
+            <div class="form-error" data-pt="Conte um pouco sobre o que espera." data-en="Tell me a bit about what you hope to achieve.">Conte um pouco sobre o que espera.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label">
+              <span data-pt="Como conheceu a Larissa?" data-en="How did you find Larissa?">Como conheceu a Larissa?</span>
+              <span class="opt" data-pt="opcional" data-en="optional">opcional</span>
+            </label>
+            <div class="form-radio-group cols-2" data-name="origem">
+              <label class="form-radio">
+                <input type="radio" name="origem" value="Instagram">
+                <span class="form-radio-mark"></span>
+                <span>Instagram</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="origem" value="Indicação">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Indicação" data-en="Referral">Indicação</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="origem" value="Podcast">
+                <span class="form-radio-mark"></span>
+                <span>Podcast</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="origem" value="LinkedIn">
+                <span class="form-radio-mark"></span>
+                <span>LinkedIn</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="origem" value="Outro">
+                <span class="form-radio-mark"></span>
+                <span data-pt="Outro" data-en="Other">Outro</span>
+              </label>
+            </div>
+            <input type="text" class="form-radio-other-input" id="origem-outro" data-pt-placeholder="Especifique" data-en-placeholder="Please specify" placeholder="Especifique" style="display:none;">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="mentoria-anterior">
+              <span data-pt="Já fez alguma mentoria antes? Se sim, qual?" data-en="Have you done any mentorship before? If so, which?">Já fez alguma mentoria antes? Se sim, qual?</span>
+              <span class="req">*</span>
+            </label>
+            <input type="text" id="mentoria-anterior" name="mentoria_anterior" required data-pt-placeholder="Pode escrever 'não' se for o caso" data-en-placeholder="You can write 'no' if that's the case" placeholder="Pode escrever 'não' se for o caso">
+            <div class="form-error" data-pt="Conte se já fez mentoria antes." data-en="Tell me if you've done mentorship before.">Conte se já fez mentoria antes.</div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="idioma">
+              <span data-pt="Idioma preferido das sessões" data-en="Preferred language for sessions">Idioma preferido das sessões</span>
+              <span class="req">*</span>
+            </label>
+            <select id="idioma" name="idioma" required>
+              <option value="" disabled selected data-pt="Selecione o idioma" data-en="Select language">Selecione o idioma</option>
+              <option value="Português">Português</option>
+              <option value="English">English</option>
+              <option value="Tanto faz / bilíngue" data-pt="Tanto faz / bilíngue" data-en="Either / bilingual">Tanto faz / bilíngue</option>
+            </select>
+            <div class="form-error" data-pt="Selecione uma opção." data-en="Please select an option.">Selecione uma opção.</div>
+          </div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="form-nav">
+          <button type="button" class="form-back hidden" id="form-back">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 7H1M6 2L1 7l5 5"/></svg>
+            <span data-pt="Voltar" data-en="Back">Voltar</span>
+          </button>
+          <button type="button" class="form-next" id="form-next">
+            <span data-pt="Avançar" data-en="Next">Avançar</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+          </button>
+          <button type="submit" class="form-submit" id="form-submit" style="display:none;">
+            <span data-pt="Enviar via WhatsApp" data-en="Send via WhatsApp">Enviar via WhatsApp</span>
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+          </button>
+        </div>
+      </form>
+      <p class="cta-note" data-pt="Resposta direto da Larissa · @larissasayuri.q · PT &amp; EN" data-en="Answered directly by Larissa · @larissasayuri.q · PT &amp; EN">Resposta direto da Larissa · @larissasayuri.q · PT &amp; EN</p>
+    </div>
+
+    <div class="cta-trust">
+      <span>PMP</span>
+      <span>MBA USP</span>
+      <span>Guinness World Record</span>
+      <span>PMI Washington DC</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
-  <div class="footer-logo">Larissa <span>Sayuri</span> · ROUTE</div>
-  <div class="footer-right">
-    @larissasayuri.q<br>
-    "Your route to the life you want."
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        Larissa <span>Sayuri</span> · ROUTE
+      </div>
+      <div class="footer-brand-sub">"Your route to the life you want."</div>
+      <a href="https://instagram.com/larissasayuri.q" target="_blank" rel="noopener noreferrer" class="footer-ig-main" aria-label="Instagram @larissasayuri.q">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="3.5"/>
+          <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+        </svg>
+        @larissasayuri.q
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copyright">© <span id="footer-year">2026</span> Mentoria ROUTE · <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span></div>
+    <div class="footer-tagline-center" data-pt="&quot;Da confusão à direção concreta.&quot;" data-en="&quot;From confusion to concrete direction.&quot;">"Da confusão à direção concreta."</div>
+    <div class="footer-signature">
+      <span class="footer-signature-label" data-pt="Desenvolvido por" data-en="Developed by">Desenvolvido por</span>
+      <span class="footer-signature-pills">
+        <a href="https://chibodev.com" target="_blank" rel="noopener noreferrer" aria-label="Chibo Dev — site oficial">
+          <span class="chibo-mark" aria-hidden="true">C<span>.</span></span>
+          <span class="chibo-name">Chibo Dev</span>
+        </a>
+        <span class="footer-signature-divider" aria-hidden="true"></span>
+        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener noreferrer" class="is-ig" aria-label="Instagram @chibodev">
+          <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="3.5"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+          </svg>
+          @chibodev
+        </a>
+      </span>
+    </div>
   </div>
 </footer>
 
+<!-- ============ STICKY CTA MOBILE ============ -->
+<a href="#formulario" class="sticky-cta" id="stickyCta" data-pt="Agendar conversa inicial →" data-en="Schedule initial conversation →">Agendar conversa inicial →</a>
+
+<!-- ============ JS — minimal, no dependencies ============ -->
+<script>
+(function(){
+  'use strict';
+
+  // ============ LANGUAGE SWITCHER ============
+  var STORAGE_KEY = 'route-lang';
+  var I18N = {
+    pt: {
+      htmlLang: 'pt-BR',
+      title: 'Mentoria ROUTE — Larissa Sayuri | Desenvolvimento Pessoal & Carreira',
+      desc: 'Mentoria individual de desenvolvimento pessoal e carreira com Larissa Sayuri — Engenheira, PMP, MBA USP, Guinness World Record. 6 encontros, 3 meses. PT & EN. Your route to the life you want.',
+      ogTitle: 'Mentoria ROUTE — Larissa Sayuri',
+      ogDesc: 'Your route to the life you want. Mentoria individual de desenvolvimento pessoal e carreira. PT & EN.',
+      waGreeting: 'Olá Larissa! Tenho interesse na Mentoria ROUTE.',
+      waName: 'Nome',
+      waEmail: 'E-mail',
+      waMoment: 'Momento atual',
+      waLang: 'Idioma preferido',
+      waMessage: 'Sobre mim',
+      waClose: 'Gostaria de agendar a conversa inicial.'
+    },
+    en: {
+      htmlLang: 'en',
+      title: 'ROUTE Mentorship — Larissa Sayuri | Personal & Career Development',
+      desc: 'One-on-one personal and career development mentorship with Larissa Sayuri — Engineer, PMP, MBA USP, Guinness World Record Holder. 6 sessions, 3 months. PT & EN. Your route to the life you want.',
+      ogTitle: 'ROUTE Mentorship — Larissa Sayuri',
+      ogDesc: 'Your route to the life you want. One-on-one personal and career development mentorship. PT & EN.',
+      waGreeting: "Hi Larissa! I'm interested in the ROUTE Mentorship.",
+      waName: 'Name',
+      waEmail: 'Email',
+      waMoment: 'Current moment',
+      waLang: 'Preferred language',
+      waMessage: 'About me',
+      waClose: "I'd like to schedule the initial conversation."
+    }
+  };
+
+  function detectLang(){
+    // Prioridade: 1) query string (?lang=en) → permite que hreflang funcione
+    //             2) localStorage (escolha anterior do usuário)
+    //             3) navigator.language (idioma do navegador)
+    try {
+      var qs = new URLSearchParams(window.location.search);
+      var qLang = (qs.get('lang') || '').toLowerCase();
+      if (qLang === 'pt' || qLang === 'en') return qLang;
+    } catch(e){}
+    var stored = null;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+    if (stored === 'pt' || stored === 'en') return stored;
+    var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    return nav.indexOf('pt') === 0 ? 'pt' : 'en';
+  }
+
+  function applyLang(lang){
+    if (lang !== 'pt' && lang !== 'en') lang = 'pt';
+    var dict = I18N[lang];
+
+    document.documentElement.lang = dict.htmlLang;
+    var titleEl = document.querySelector('title');
+    if (titleEl) titleEl.textContent = dict.title;
+    var descEl = document.querySelector('meta[name="description"]');
+    if (descEl) descEl.setAttribute('content', dict.desc);
+    var ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT) ogT.setAttribute('content', dict.ogTitle);
+    var ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD) ogD.setAttribute('content', dict.ogDesc);
+    var twT = document.querySelector('meta[name="twitter:title"]');
+    if (twT) twT.setAttribute('content', dict.ogTitle);
+    var twD = document.querySelector('meta[name="twitter:description"]');
+    if (twD) twD.setAttribute('content', dict.ogDesc);
+    var ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) ogLocale.setAttribute('content', lang === 'pt' ? 'pt_BR' : 'en_US');
+
+    var nodes = document.querySelectorAll('[data-pt][data-en]');
+    nodes.forEach(function(n){
+      var txt = n.getAttribute('data-' + lang);
+      if (txt != null) {
+        n.textContent = txt;
+        // For <option> elements, also sync value when not empty (the empty
+        // placeholder option stays empty so required validation keeps working)
+        if (n.tagName === 'OPTION' && n.value) {
+          n.value = txt;
+        }
+      }
+    });
+
+    var ph = document.querySelectorAll('[data-pt-placeholder][data-en-placeholder]');
+    ph.forEach(function(n){
+      var txt = n.getAttribute('data-' + lang + '-placeholder');
+      if (txt != null) n.setAttribute('placeholder', txt);
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+
+    // Step label do form multi-step (chaves data-pt-1/2/3)
+    var stepLabel = document.getElementById('step-label');
+    if (stepLabel) {
+      var curStep = window.__routeCurrentStep || 1;
+      var key = 'data-' + lang + '-' + curStep;
+      var txt = stepLabel.getAttribute(key);
+      if (txt) stepLabel.textContent = txt;
+    }
+
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    window.__routeLang = lang;
+  }
+
+  var initialLang = detectLang();
+  applyLang(initialLang);
+
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      applyLang(b.getAttribute('data-lang'));
+    });
+  });
+
+  // ============ NAV scrolled state + sticky CTA visibility ============
+  var nav = document.getElementById('nav');
+  var sticky = document.getElementById('stickyCta');
+  var hero = document.querySelector('.hero');
+  var formSection = document.getElementById('formulario');
+  var ticking = false;
+
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var y = window.scrollY || window.pageYOffset;
+      if (y > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+      if (hero && sticky && formSection) {
+        var heroBottom = hero.offsetTop + hero.offsetHeight;
+        var formTop = formSection.offsetTop - 100;
+        var inFormZone = y >= formTop;
+        var shouldShow = y > heroBottom - 200 && !inFormZone;
+        sticky.classList.toggle('show', shouldShow);
+      }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ── Reveal on scroll (IntersectionObserver)
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      io.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      el.classList.add('in');
+    });
+  }
+
+  // ── Scroll-guided focus: o item mais próximo do centro da viewport ganha .focused
+  //    Mesmos estilos que :hover — guia leitura no scroll, desktop e mobile.
+  //    Respeita prefers-reduced-motion (desliga).
+  var motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (motionOk && 'IntersectionObserver' in window) {
+    // Groups: cada grupo só pode ter um item focused por vez
+    var focusGroups = [
+      '.problema-grid .problema-item',
+      '.route-letters .route-row',
+      '.sessoes-grid .sessao-item',
+      '.para-quem-grid .pq-card',
+      '.dep-grid .dep-card'
+    ];
+
+    function setupFocusGroup(selector){
+      var items = Array.prototype.slice.call(document.querySelectorAll(selector));
+      if (!items.length) return;
+
+      var visible = new Set();
+      var rafId = null;
+
+      function pickClosest(){
+        rafId = null;
+        if (!visible.size) return;
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        var centerY = vh / 2;
+        var best = null;
+        var bestDist = Infinity;
+        visible.forEach(function(el){
+          var r = el.getBoundingClientRect();
+          var itemCenter = r.top + r.height / 2;
+          var dist = Math.abs(itemCenter - centerY);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = el;
+          }
+        });
+        items.forEach(function(el){
+          el.classList.toggle('focused', el === best);
+        });
+      }
+
+      function schedule(){
+        if (rafId == null) rafId = requestAnimationFrame(pickClosest);
+      }
+
+      // Apertar a zona ativa para o miolo da tela (40% central)
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        });
+        schedule();
+      }, {
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-30% 0px -30% 0px'
+      });
+
+      items.forEach(function(el){ obs.observe(el); });
+      window.addEventListener('scroll', schedule, { passive: true });
+      window.addEventListener('resize', schedule, { passive: true });
+    }
+
+    focusGroups.forEach(setupFocusGroup);
+  }
+
+  // ── Form multi-step → WhatsApp
+  var form = document.getElementById('route-form');
+  var WHATSAPP_NUMBER = '5511986222211'; // confirmado
+
+  var currentStep = 1;
+  var TOTAL_STEPS = 3;
+
+  var stepCurrentEl = document.getElementById('step-current');
+  var stepBarEl = document.getElementById('step-bar');
+  var stepLabelEl = document.getElementById('step-label');
+  var backBtn = document.getElementById('form-back');
+  var nextBtn = document.getElementById('form-next');
+  var submitBtn = document.getElementById('form-submit');
+
+  function updateStepUI(shouldScroll) {
+    var lang = window.__routeLang || 'pt';
+    window.__routeCurrentStep = currentStep;
+    // Show only active step
+    form.querySelectorAll('.form-step').forEach(function(s){
+      s.classList.toggle('active', parseInt(s.dataset.step, 10) === currentStep);
+    });
+    // Progress bar
+    if (stepCurrentEl) stepCurrentEl.textContent = currentStep;
+    if (stepBarEl) stepBarEl.style.width = (currentStep / TOTAL_STEPS * 100) + '%';
+    // Step label (translated)
+    if (stepLabelEl) {
+      var key = 'data-' + lang + '-' + currentStep;
+      var labelText = stepLabelEl.getAttribute(key);
+      if (labelText) stepLabelEl.textContent = labelText;
+    }
+    // Back button
+    if (backBtn) backBtn.classList.toggle('hidden', currentStep === 1);
+    // Next vs Submit
+    if (nextBtn && submitBtn) {
+      var isLast = currentStep === TOTAL_STEPS;
+      nextBtn.style.display = isLast ? 'none' : 'inline-flex';
+      submitBtn.style.display = isLast ? 'inline-flex' : 'none';
+    }
+    // Scroll só quando o usuário trocou de etapa (não na inicialização)
+    if (shouldScroll) {
+      var wrapper = document.querySelector('.cta-form-wrapper');
+      if (wrapper) {
+        var rect = wrapper.getBoundingClientRect();
+        // Só rola se o topo do form está acima da viewport visível
+        if (rect.top < 80) {
+          wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+  }
+
+  function validateField(field) {
+    var input = field.querySelector('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
+    if (!input) return true;
+    var val = (input.value || '').trim();
+    if (input.hasAttribute('required') && !val) {
+      field.classList.add('error');
+      return false;
+    }
+    if (input.type === 'email' && val) {
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if (!emailOk) { field.classList.add('error'); return false; }
+    }
+    if (input.type === 'tel' && val) {
+      var telOk = /[\d]{7,}/.test(val.replace(/\D/g, ''));
+      if (!telOk) { field.classList.add('error'); return false; }
+    }
+    field.classList.remove('error');
+    return true;
+  }
+
+  function validateRadioGroup(group) {
+    var required = group.getAttribute('data-required') === 'true';
+    if (!required) return true;
+    var checked = group.querySelector('input[type="radio"]:checked');
+    if (!checked) {
+      group.classList.add('error');
+      return false;
+    }
+    group.classList.remove('error');
+    return true;
+  }
+
+  function validateStep(step) {
+    var stepEl = form.querySelector('.form-step[data-step="' + step + '"]');
+    if (!stepEl) return true;
+    var allValid = true;
+    // Text/email/tel/select/textarea
+    stepEl.querySelectorAll('.form-field').forEach(function(f){
+      // Skip fields que só têm radio group
+      var hasInput = f.querySelector('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
+      if (hasInput) {
+        if (!validateField(f)) allValid = false;
+      }
+    });
+    // Radio groups
+    stepEl.querySelectorAll('.form-radio-group').forEach(function(g){
+      if (!validateRadioGroup(g)) allValid = false;
+    });
+    if (!allValid) {
+      var first = stepEl.querySelector('.form-field.error input, .form-field.error select, .form-field.error textarea, .form-radio-group.error');
+      if (first && first.focus) first.focus();
+    }
+    return allValid;
+  }
+
+  // Input limpa erro ao começar a digitar / selecionar
+  form.addEventListener('input', function(e){
+    var field = e.target.closest('.form-field');
+    if (field) field.classList.remove('error');
+    var group = e.target.closest('.form-radio-group');
+    if (group) group.classList.remove('error');
+  }, true);
+  form.addEventListener('change', function(e){
+    var group = e.target.closest('.form-radio-group');
+    if (group) group.classList.remove('error');
+  }, true);
+
+  // "Outro" — radio show/hide do input livre
+  function setupOtherInput(groupName, inputId) {
+    var radios = form.querySelectorAll('input[name="' + groupName + '"]');
+    var otherInput = document.getElementById(inputId);
+    if (!otherInput) return;
+    radios.forEach(function(r){
+      r.addEventListener('change', function(){
+        var isOther = (r.checked && r.value === 'Outro');
+        otherInput.style.display = isOther ? 'block' : 'none';
+        if (isOther) setTimeout(function(){ otherInput.focus(); }, 50);
+        else otherInput.value = '';
+      });
+    });
+  }
+  setupOtherInput('ocupacao', 'ocupacao-outro');
+  setupOtherInput('origem', 'origem-outro');
+
+  // Navegação
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(){
+      if (!validateStep(currentStep)) return;
+      if (currentStep < TOTAL_STEPS) {
+        currentStep++;
+        updateStepUI(true);
+      }
+    });
+  }
+  if (backBtn) {
+    backBtn.addEventListener('click', function(){
+      if (currentStep > 1) {
+        currentStep--;
+        updateStepUI(true);
+      }
+    });
+  }
+
+  // Submit
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!validateStep(currentStep)) return;
+
+    // Helper para ler valor de campo
+    function v(id){ var el = document.getElementById(id); return el ? (el.value || '').trim() : ''; }
+    function radio(name){
+      var r = form.querySelector('input[name="' + name + '"]:checked');
+      return r ? r.value : '';
+    }
+
+    var ocupacao = radio('ocupacao');
+    if (ocupacao === 'Outro') {
+      var outro = v('ocupacao-outro');
+      if (outro) ocupacao = 'Outro: ' + outro;
+    }
+    var origem = radio('origem');
+    if (origem === 'Outro') {
+      var oOutro = v('origem-outro');
+      if (oOutro) origem = 'Outro: ' + oOutro;
+    }
+
+    var data = {
+      nome: v('nome'),
+      email: v('email'),
+      whatsapp: v('whatsapp'),
+      cidade: v('cidade'),
+      formacao: radio('formacao'),
+      areaAtual: v('area-atual'),
+      areaMigrar: v('area-migrar'),
+      ocupacao: ocupacao,
+      desafio: v('desafio'),
+      expectativa: v('expectativa'),
+      origem: origem,
+      mentoriaAnterior: v('mentoria-anterior'),
+      idioma: v('idioma')
+    };
+
+    var lang = window.__routeLang || 'pt';
+    var t = I18N[lang];
+
+    var lines = [];
+    lines.push(t.waGreeting);
+    lines.push('');
+    lines.push('— ' + (lang === 'pt' ? 'Quem sou' : 'About me') + ' —');
+    lines.push('• ' + t.waName + ': ' + data.nome);
+    lines.push('• ' + t.waEmail + ': ' + data.email);
+    lines.push('• WhatsApp: ' + data.whatsapp);
+    lines.push('• ' + (lang === 'pt' ? 'Cidade/País' : 'City/Country') + ': ' + data.cidade);
+    lines.push('');
+    lines.push('— ' + (lang === 'pt' ? 'Minha trajetória' : 'My trajectory') + ' —');
+    if (data.formacao) lines.push('• ' + (lang === 'pt' ? 'Formação' : 'Education') + ': ' + data.formacao);
+    lines.push('• ' + (lang === 'pt' ? 'Área atual' : 'Current field') + ': ' + data.areaAtual);
+    if (data.areaMigrar) lines.push('• ' + (lang === 'pt' ? 'Quero migrar para' : 'Want to move into') + ': ' + data.areaMigrar);
+    lines.push('• ' + (lang === 'pt' ? 'Ocupação' : 'Occupation') + ': ' + data.ocupacao);
+    lines.push('');
+    lines.push('— ' + (lang === 'pt' ? 'Meus objetivos' : 'My goals') + ' —');
+    if (data.desafio) lines.push('• ' + (lang === 'pt' ? 'Maior desafio hoje' : 'Biggest challenge today') + ': ' + data.desafio);
+    lines.push('• ' + (lang === 'pt' ? 'O que espero alcançar' : 'What I hope to achieve') + ': ' + data.expectativa);
+    if (data.origem) lines.push('• ' + (lang === 'pt' ? 'Como te conheci' : 'How I found you') + ': ' + data.origem);
+    lines.push('• ' + (lang === 'pt' ? 'Mentoria anterior' : 'Previous mentorship') + ': ' + data.mentoriaAnterior);
+    lines.push('• ' + t.waLang + ': ' + data.idioma);
+    lines.push('');
+    lines.push(t.waClose);
+
+    var msg = lines.join('\n');
+    var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank', 'noopener');
+  });
+
+  // Initial UI sync
+  updateStepUI();
+
+  // ── Year auto in footer
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
