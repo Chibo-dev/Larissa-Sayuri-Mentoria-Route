@@ -4,17 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<!-- Cache off (REMOVER quando o site estabilizar para ganhar performance) -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
 <script>document.documentElement.className='js';</script>
 <title>Mentoria ROUTE — Larissa Sayuri | Desenvolvimento Pessoal & Carreira</title>
 <meta name="description" content="Mentoria individual de desenvolvimento pessoal e carreira com Larissa Sayuri — Engenheira, PMP, MBA USP, Guinness World Record. 6 encontros, 3 meses. PT & EN. Your route to the life you want.">
 <meta name="author" content="Larissa Sayuri">
 <meta name="theme-color" content="#060C18">
-<link rel="canonical" href="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/">
+<link rel="canonical" href="https://larissasayuri.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -22,9 +17,9 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Mentoria ROUTE — Larissa Sayuri">
 <meta property="og:description" content="Your route to the life you want. Mentoria individual de desenvolvimento pessoal e carreira. PT & EN.">
-<meta property="og:url" content="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/">
-<meta property="og:image" content="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/og-image.jpg">
-<meta property="og:image:secure_url" content="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/og-image.jpg">
+<meta property="og:url" content="https://larissasayuri.com/">
+<meta property="og:image" content="https://larissasayuri.com/og-image.jpg">
+<meta property="og:image:secure_url" content="https://larissasayuri.com/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,7 +30,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mentoria ROUTE — Larissa Sayuri">
 <meta name="twitter:description" content="Your route to the life you want. Mentoria individual PT & EN.">
-<meta name="twitter:image" content="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/og-image.jpg">
+<meta name="twitter:image" content="https://larissasayuri.com/og-image.jpg">
 <meta name="twitter:image:alt" content="Mentoria ROUTE — Larissa Sayuri">
 <!-- Se a Larissa tiver Twitter/X, descomentar e preencher:
 <meta name="twitter:site" content="@larissasayuri">
@@ -43,9 +38,9 @@
 -->
 
 <!-- Hreflang: sinaliza para o Google as variantes de idioma -->
-<link rel="alternate" hreflang="pt-BR" href="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/">
-<link rel="alternate" hreflang="en" href="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/">
+<link rel="alternate" hreflang="pt-BR" href="https://larissasayuri.com/">
+<link rel="alternate" hreflang="en" href="https://larissasayuri.com/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://larissasayuri.com/">
 
 <!-- Favicon SVG inline (zero request) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060C18'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-style='italic' font-weight='300' fill='%23C9A84C' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
@@ -60,19 +55,20 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/#larissa",
+      "@id": "https://larissasayuri.com/#larissa",
       "name": "Larissa Sayuri",
       "jobTitle": "Engenheira Eletricista, Mentora de Carreira",
       "description": "Engenheira Eletricista, PMP, MBA em Gestão de Projetos pela USP, Guinness World Record Holder e Mentora Oficial do PMI Washington DC.",
       "alumniOf": {"@type":"CollegeOrUniversity","name":"Universidade de São Paulo"},
       "hasCredential": ["PMP","MBA Gestão de Projetos USP","Guinness World Record Holder"],
       "knowsLanguage": ["pt-BR","en-US"],
+      "email": "contato@larissasayuri.com",
       "sameAs": ["https://instagram.com/larissasayuri.q"]
     },
     {
       "@type": "Service",
       "name": "Mentoria ROUTE",
-      "provider": {"@id":"https://chibo-dev.github.io/Larissa-Sayuri-Mentoria-Route/#larissa"},
+      "provider": {"@id":"https://larissasayuri.com/#larissa"},
       "serviceType": "Mentoria individual de desenvolvimento pessoal e carreira",
       "areaServed": ["Brasil","Estados Unidos","Global"],
       "availableLanguage": ["pt-BR","en-US"],
@@ -154,6 +150,13 @@
     --border: rgba(201,168,76,0.18);
     --border-subtle: rgba(255,255,255,0.06);
     --border-blue: rgba(26,127,212,0.20);
+
+    /* Chibo Dev brand (uso restrito: assinatura no footer) */
+    --chibo-green: #C0FF3E;
+    --chibo-green-glow: rgba(192, 255, 62, 0.4);
+    /* Instagram brand color (uso restrito: link IG no footer) */
+    --ig-pink: #D62976;
+    --ig-pink-glow: rgba(214, 41, 118, 0.4);
 
     --serif: 'Cormorant Garamond', 'Cormorant Fallback', 'Times New Roman', Georgia, serif;
     --sans: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -1692,7 +1695,7 @@
     color: var(--slate-strong);
   }
   .footer-ig-main {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
     font-size: 12px;
@@ -1744,9 +1747,20 @@
     color: var(--slate-strong);
     transition: color 0.3s var(--ease-out);
   }
-  .footer-signature:hover { color: var(--gold-light); }
   .footer-signature-label {
     font-weight: 400;
+    color: var(--off-white);
+    cursor: default;
+    white-space: nowrap;
+    transition: color 0.3s var(--ease-out);
+  }
+  /* Hover do "Desenvolvido por" → label dourado + divisor dourado intenso */
+  .footer-signature-label:hover {
+    color: var(--gold);
+  }
+  .footer-signature-label:hover ~ .footer-signature-pills .footer-signature-divider {
+    opacity: 1;
+    background: var(--gold-light);
   }
   .footer-signature-pills {
     display: inline-flex;
@@ -1760,8 +1774,10 @@
   .footer-signature-divider {
     width: 1px;
     height: 18px;
-    background: var(--border-subtle);
+    background: var(--off-white);
+    opacity: 0.4;
     flex-shrink: 0;
+    transition: opacity 0.3s var(--ease-out), background 0.3s var(--ease-out);
   }
   .footer-signature a {
     display: inline-flex;
@@ -1774,19 +1790,39 @@
     border-radius: 50px;
     transition: all 0.3s var(--ease-out);
     background: transparent;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .footer-signature a:hover {
-    background: rgba(201,168,76,0.06);
-    border-color: var(--border);
+  /* Hover do pill "Chibo Dev" — identidade Chibo Dev (verde) */
+  .footer-signature a:not(.is-ig):hover {
+    background: rgba(192, 255, 62, 0.08);
+    border-color: rgba(192, 255, 62, 0.5);
     transform: translateY(-1px);
-    color: var(--off-white);
+  }
+  /* O texto "Chibo Dev" vira verde, mas o C do monograma fica branco */
+  .footer-signature a:not(.is-ig):hover .chibo-name {
+    color: var(--chibo-green);
+  }
+  /* Só o ponto . ganha glow (a marca é C branco + . verde) */
+  .footer-signature a:not(.is-ig):hover .chibo-mark span {
+    filter: drop-shadow(0 0 4px var(--chibo-green-glow));
   }
   .footer-signature a.is-ig {
     padding: 6px 10px;
   }
+  /* Hover do pill "@chibodev" — identidade Instagram (rosa) */
   .footer-signature a.is-ig:hover {
-    border-color: var(--gold);
-    color: var(--gold-light);
+    background: rgba(214, 41, 118, 0.06);
+    border-color: rgba(214, 41, 118, 0.5);
+    transform: translateY(-1px);
+    color: var(--ig-pink);
+  }
+  /* Glow extra no ícone colorido durante hover */
+  .footer-signature a.is-ig-color:hover .ig-icon {
+    filter: drop-shadow(0 0 6px var(--ig-pink-glow));
+  }
+  .ig-icon {
+    transition: filter 0.3s var(--ease-out);
   }
   /* Monograma C. */
   .chibo-mark {
@@ -1799,7 +1835,7 @@
     align-items: baseline;
   }
   .chibo-mark span {
-    color: #22c55e;
+    color: var(--chibo-green);
     margin-left: 1px;
   }
   .chibo-name { font-weight: 500; }
@@ -2633,6 +2669,13 @@
         </svg>
         @larissasayuri.q
       </a>
+      <a href="mailto:contato@larissasayuri.com" class="footer-ig-main" aria-label="E-mail contato@larissasayuri.com">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3 7l9 6 9-6"/>
+        </svg>
+        contato@larissasayuri.com
+      </a>
     </div>
   </div>
 
@@ -2647,11 +2690,20 @@
           <span class="chibo-name">Chibo Dev</span>
         </a>
         <span class="footer-signature-divider" aria-hidden="true"></span>
-        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener noreferrer" class="is-ig" aria-label="Instagram @chibodev">
-          <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="3.5"/>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener noreferrer" class="is-ig is-ig-color" aria-label="Instagram @chibodev">
+          <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <defs>
+              <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FEDA75"/>
+                <stop offset="25%" stop-color="#FA7E1E"/>
+                <stop offset="50%" stop-color="#D62976"/>
+                <stop offset="75%" stop-color="#962FBF"/>
+                <stop offset="100%" stop-color="#4F5BD5"/>
+              </linearGradient>
+            </defs>
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="url(#ig-grad)"/>
+            <circle cx="12" cy="12" r="3.5" stroke="url(#ig-grad)"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="url(#ig-grad)" stroke="none"/>
           </svg>
           @chibodev
         </a>
@@ -2790,19 +2842,24 @@
   var formSection = document.getElementById('formulario');
   var ticking = false;
 
-  // Cache de offsets (recalculados só em resize/load) para evitar reflow forçado a cada scroll
-  var cachedHeroBottom = 0;
-  var cachedFormTop = 0;
-  function recalcOffsets(){
-    if (hero) cachedHeroBottom = hero.offsetTop + hero.offsetHeight;
-    if (formSection) cachedFormTop = formSection.offsetTop - 100;
+  // Sticky CTA: usa IntersectionObserver para detectar zonas (zero reflow forçado)
+  var pastHero = false;
+  var inForm = false;
+  function updateSticky(){
+    if (sticky) sticky.classList.toggle('show', pastHero && !inForm);
   }
-  // Calcular após o load (quando fonts/imagens estão dimensionadas) e em resize
-  window.addEventListener('load', recalcOffsets);
-  window.addEventListener('resize', recalcOffsets, { passive: true });
-  // Primeira chamada imediata (best-effort, será recalculada após load)
-  if (document.readyState === 'complete') recalcOffsets();
-  else recalcOffsets();
+  if ('IntersectionObserver' in window && hero) {
+    new IntersectionObserver(function(entries){
+      pastHero = !entries[0].isIntersecting;
+      updateSticky();
+    }, { rootMargin: '-200px 0px 0px 0px' }).observe(hero);
+  }
+  if ('IntersectionObserver' in window && formSection) {
+    new IntersectionObserver(function(entries){
+      inForm = entries[0].isIntersecting;
+      updateSticky();
+    }, { rootMargin: '100px 0px 0px 0px' }).observe(formSection);
+  }
 
   function onScroll(){
     if (ticking) return;
@@ -2810,11 +2867,6 @@
     requestAnimationFrame(function(){
       var y = window.scrollY || window.pageYOffset;
       if (y > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
-      if (hero && sticky && formSection) {
-        var inFormZone = y >= cachedFormTop;
-        var shouldShow = y > cachedHeroBottom - 200 && !inFormZone;
-        sticky.classList.toggle('show', shouldShow);
-      }
       ticking = false;
     });
   }
@@ -2955,26 +3007,170 @@
     }
   }
 
+  // ============ Validações ============
+
+  // Mensagens de erro por idioma e tipo
+  var ERR_MSG = {
+    pt: {
+      required: 'Este campo é obrigatório.',
+      tooShort: 'Precisa ter pelo menos {n} caracteres.',
+      nameInvalid: 'Informe um nome válido (mínimo 2 letras).',
+      emailInvalid: 'Informe um e-mail válido (ex: nome@dominio.com).',
+      emailTypo: 'Verifique o domínio do e-mail. Você quis dizer "{suggestion}"?',
+      telInvalid: 'Informe um telefone válido com código do país.',
+      telBRInvalid: 'Número BR precisa ter 11 dígitos (DDD + 9 dígitos).',
+      telUSInvalid: 'Número EUA precisa ter 10 dígitos (DDD + 7 dígitos).',
+      otherRequired: 'Por favor, especifique sua opção.',
+      expectativaShort: 'Conte um pouco mais — pelo menos 20 caracteres.'
+    },
+    en: {
+      required: 'This field is required.',
+      tooShort: 'Must be at least {n} characters.',
+      nameInvalid: 'Please enter a valid name (min 2 letters).',
+      emailInvalid: 'Please enter a valid email (e.g., name@domain.com).',
+      emailTypo: 'Check the email domain. Did you mean "{suggestion}"?',
+      telInvalid: 'Please enter a valid phone with country code.',
+      telBRInvalid: 'BR number must have 11 digits (area code + 9 digits).',
+      telUSInvalid: 'US number must have 10 digits (area code + 7 digits).',
+      otherRequired: 'Please specify your option.',
+      expectativaShort: 'Tell me a bit more — at least 20 characters.'
+    }
+  };
+
+  function setFieldError(field, messageKey, replacements) {
+    var lang = window.__routeLang || 'pt';
+    var msg = (ERR_MSG[lang] && ERR_MSG[lang][messageKey]) || ERR_MSG.pt[messageKey] || '';
+    if (replacements) {
+      Object.keys(replacements).forEach(function(k){
+        msg = msg.replace('{' + k + '}', replacements[k]);
+      });
+    }
+    var errEl = field.querySelector('.form-error');
+    if (errEl && msg) errEl.textContent = msg;
+    field.classList.add('error');
+  }
+
+  // Domínios comuns pra detectar typos
+  var COMMON_EMAIL_DOMAINS = ['gmail.com', 'hotmail.com', 'outlook.com', 'yahoo.com', 'icloud.com', 'live.com', 'uol.com.br', 'bol.com.br'];
+
+  function suggestEmailDomain(email) {
+    var parts = email.split('@');
+    if (parts.length !== 2) return null;
+    var domain = parts[1].toLowerCase();
+    // Já é um domínio comum, sem sugestão
+    if (COMMON_EMAIL_DOMAINS.indexOf(domain) !== -1) return null;
+    // Levenshtein simples — busca o mais próximo
+    var bestMatch = null;
+    var bestDist = Infinity;
+    COMMON_EMAIL_DOMAINS.forEach(function(d){
+      var dist = levenshtein(domain, d);
+      if (dist > 0 && dist <= 2 && dist < bestDist) {
+        bestDist = dist;
+        bestMatch = d;
+      }
+    });
+    return bestMatch ? (parts[0] + '@' + bestMatch) : null;
+  }
+
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    var m = a.length, n = b.length;
+    if (!m) return n; if (!n) return m;
+    var prev = [], curr = [];
+    for (var j = 0; j <= n; j++) prev[j] = j;
+    for (var i = 1; i <= m; i++) {
+      curr[0] = i;
+      for (var j = 1; j <= n; j++) {
+        var cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        curr[j] = Math.min(curr[j - 1] + 1, prev[j] + 1, prev[j - 1] + cost);
+      }
+      for (var k = 0; k <= n; k++) prev[k] = curr[k];
+    }
+    return prev[n];
+  }
+
   function validateField(field) {
     var input = field.querySelector('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
     if (!input) return true;
     var val = (input.value || '').trim();
+    var id = input.id;
+
+    // — Required
     if (input.hasAttribute('required') && !val) {
-      field.classList.add('error');
+      setFieldError(field, 'required');
       return false;
     }
-    if (input.type === 'email' && val) {
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-      if (!emailOk) { field.classList.add('error'); return false; }
+    if (!val) {
+      field.classList.remove('error');
+      return true;
     }
-    if (input.type === 'tel' && val) {
-      var telOk = /[\d]{7,}/.test(val.replace(/\D/g, ''));
-      if (!telOk) { field.classList.add('error'); return false; }
+
+    // — Nome: mínimo 2 caracteres + pelo menos 1 letra
+    if (id === 'nome') {
+      if (val.length < 2 || !/[a-zA-ZÀ-ÿ]/.test(val)) {
+        setFieldError(field, 'nameInvalid');
+        return false;
+      }
     }
+
+    // — Cidade e Áreas: mínimo 2 caracteres
+    if ((id === 'cidade' || id === 'area-atual' || id === 'area-migrar') && val.length < 2) {
+      setFieldError(field, 'tooShort', { n: 2 });
+      return false;
+    }
+
+    // — E-mail
+    if (input.type === 'email') {
+      var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(val)) {
+        setFieldError(field, 'emailInvalid');
+        return false;
+      }
+      // Detecta typos em domínios comuns (avisa, mas não bloqueia 2x)
+      var suggestion = suggestEmailDomain(val);
+      if (suggestion && !field.hasAttribute('data-typo-warned')) {
+        setFieldError(field, 'emailTypo', { suggestion: suggestion });
+        field.setAttribute('data-typo-warned', 'true');
+        return false;
+      }
+    }
+
+    // — Telefone com validação por país
+    if (input.type === 'tel') {
+      var digits = val.replace(/\D/g, '');
+      // Detecta país
+      if (val.indexOf('+55') === 0) {
+        // BR: +55 + 11 dígitos = 13 dígitos no total
+        if (digits.length !== 13) {
+          setFieldError(field, 'telBRInvalid');
+          return false;
+        }
+      } else if (val.indexOf('+1') === 0) {
+        // EUA: +1 + 10 dígitos = 11 dígitos no total
+        if (digits.length !== 11) {
+          setFieldError(field, 'telUSInvalid');
+          return false;
+        }
+      } else {
+        // Outros países: pelo menos 8 dígitos
+        if (digits.length < 8) {
+          setFieldError(field, 'telInvalid');
+          return false;
+        }
+      }
+    }
+
+    // — Textarea de expectativa: mínimo 20 caracteres
+    if (id === 'expectativa' && val.length < 20) {
+      setFieldError(field, 'expectativaShort');
+      return false;
+    }
+
     field.classList.remove('error');
     return true;
   }
 
+  // Validar "Outro" — se selecionado, o input livre precisa ser preenchido
   function validateRadioGroup(group) {
     var required = group.getAttribute('data-required') === 'true';
     if (!required) return true;
@@ -2982,6 +3178,17 @@
     if (!checked) {
       group.classList.add('error');
       return false;
+    }
+    // Se "Outro" foi selecionado, verifica o input livre
+    if (checked.value === 'Outro') {
+      var otherInput = group.parentNode.querySelector('.form-radio-other-input');
+      if (otherInput && !otherInput.value.trim()) {
+        group.classList.add('error');
+        otherInput.style.borderColor = 'var(--accent-warning, #ff6b6b)';
+        setTimeout(function(){ otherInput.style.borderColor = ''; }, 3000);
+        otherInput.focus();
+        return false;
+      }
     }
     group.classList.remove('error');
     return true;
@@ -3013,7 +3220,12 @@
   // Input limpa erro ao começar a digitar / selecionar
   form.addEventListener('input', function(e){
     var field = e.target.closest('.form-field');
-    if (field) field.classList.remove('error');
+    if (field) {
+      field.classList.remove('error');
+      // Se for o campo de e-mail e o usuário está editando após ver sugestão de typo,
+      // remove a flag pra permitir nova validação
+      if (e.target.type === 'email') field.removeAttribute('data-typo-warned');
+    }
     var group = e.target.closest('.form-radio-group');
     if (group) group.classList.remove('error');
   }, true);
@@ -3055,6 +3267,107 @@
         currentStep--;
         updateStepUI(true);
       }
+    });
+  }
+
+  // ============ Máscaras de entrada (UX) ============
+
+  // — Capitalização automática (Title Case) para nome, cidade, área
+  function capitalizeWords(str) {
+    return str
+      .toLowerCase()
+      .replace(/(^|[\s\-'])([a-zà-ÿ])/g, function(_, sep, ch) {
+        return sep + ch.toUpperCase();
+      });
+  }
+
+  // Aplica em nome, cidade, área atual e área migrar
+  ['nome', 'cidade', 'area-atual', 'area-migrar'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', function(){
+      var v = el.value.trim();
+      if (!v) return;
+      // Não capitaliza se for ALL CAPS proposital (siglas tipo USP, MIT)
+      if (v.length <= 5 && v === v.toUpperCase()) return;
+      el.value = capitalizeWords(v);
+    });
+  });
+
+  // — E-mail: trim + lowercase ao sair do campo
+  var emailEl = document.getElementById('email');
+  if (emailEl) {
+    emailEl.addEventListener('blur', function(){
+      emailEl.value = emailEl.value.trim().toLowerCase();
+    });
+  }
+
+  // — Máscara WhatsApp inteligente (detecta BR ou EUA)
+  var waEl = document.getElementById('whatsapp');
+  if (waEl) {
+    function formatWhatsApp(value) {
+      // Remove tudo que não for dígito ou +
+      var digits = value.replace(/[^\d+]/g, '');
+
+      // Se começa com + mas não tem código de país ainda, deixa o usuário digitar
+      if (digits === '+' || digits === '') return digits;
+
+      // Se não tem +, assume Brasil (adiciona +55)
+      if (digits.charAt(0) !== '+') {
+        digits = '+55' + digits;
+      }
+
+      // Detecta país pelo prefixo
+      // BR: +55 → formato +55 (XX) XXXXX-XXXX
+      if (digits.indexOf('+55') === 0) {
+        var n = digits.slice(3); // remove +55
+        if (n.length === 0) return '+55 ';
+        if (n.length <= 2) return '+55 (' + n;
+        if (n.length <= 7) return '+55 (' + n.slice(0, 2) + ') ' + n.slice(2);
+        if (n.length <= 11) return '+55 (' + n.slice(0, 2) + ') ' + n.slice(2, 7) + '-' + n.slice(7);
+        // limita a 11 dígitos (DDD + 9 dígitos)
+        return '+55 (' + n.slice(0, 2) + ') ' + n.slice(2, 7) + '-' + n.slice(7, 11);
+      }
+
+      // EUA/Canadá: +1 → formato +1 (XXX) XXX-XXXX
+      if (digits.indexOf('+1') === 0) {
+        var n = digits.slice(2);
+        if (n.length === 0) return '+1 ';
+        if (n.length <= 3) return '+1 (' + n;
+        if (n.length <= 6) return '+1 (' + n.slice(0, 3) + ') ' + n.slice(3);
+        if (n.length <= 10) return '+1 (' + n.slice(0, 3) + ') ' + n.slice(3, 6) + '-' + n.slice(6);
+        return '+1 (' + n.slice(0, 3) + ') ' + n.slice(3, 6) + '-' + n.slice(6, 10);
+      }
+
+      // Outros países: apenas espaço após o código de país (formato genérico)
+      // Ex: +351 912 345 678
+      var match = digits.match(/^\+(\d{1,4})(.*)$/);
+      if (match) {
+        var rest = match[2];
+        // Insere espaço a cada 3 dígitos
+        var formatted = rest.replace(/(\d{3})(?=\d)/g, '$1 ');
+        return '+' + match[1] + ' ' + formatted;
+      }
+
+      return digits;
+    }
+
+    waEl.addEventListener('input', function(){
+      var pos = waEl.selectionStart;
+      var before = waEl.value;
+      var formatted = formatWhatsApp(before);
+      waEl.value = formatted;
+      // Preserva posição do cursor de forma simples (no fim)
+      if (pos === before.length) {
+        waEl.setSelectionRange(formatted.length, formatted.length);
+      }
+    });
+
+    // Se o usuário colar um número sem formatação
+    waEl.addEventListener('paste', function(e){
+      setTimeout(function(){
+        waEl.value = formatWhatsApp(waEl.value);
+      }, 0);
     });
   }
 
@@ -3206,8 +3519,8 @@
       ? 'Inscrição enviada com sucesso!'
       : 'Application sent successfully!';
     var bodyTxt = lang === 'pt'
-      ? 'Obrigada, ' + (nome || '') + '. A Larissa recebeu sua inscrição e vai responder em até 48h úteis no e-mail e WhatsApp informados.'
-      : 'Thank you, ' + (nome || '') + '. Larissa has received your application and will reply within 48 business hours via the email and WhatsApp you provided.';
+      ? 'Obrigada, ' + (nome || '') + '. A Larissa recebeu sua inscrição e vai responder em até 48h úteis no e-mail informado.'
+      : 'Thank you, ' + (nome || '') + '. Larissa has received your application and will reply within 48 business hours via the email you provided.';
     var noteTxt = lang === 'pt'
       ? 'Se não encontrar o e-mail dela, verifique a caixa de spam ou promoções.'
       : 'If you don\'t see her email, please check your spam or promotions folder.';
@@ -3231,8 +3544,8 @@
     if (existing) existing.remove();
 
     var msgTxt = lang === 'pt'
-      ? 'Não conseguimos enviar agora. Tente novamente em alguns segundos ou entre em contato pelo WhatsApp.'
-      : 'We couldn\'t send right now. Please try again in a few seconds or reach out via WhatsApp.';
+      ? 'Não conseguimos enviar agora. Tente novamente em alguns segundos ou entre em contato por contato@larissasayuri.com ou pelo Instagram @larissasayuri.q.'
+      : 'We couldn\'t send right now. Please try again in a few seconds or reach out at contato@larissasayuri.com or on Instagram @larissasayuri.q.';
 
     var banner = document.createElement('div');
     banner.id = 'form-error-banner';

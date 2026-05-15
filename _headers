@@ -1,0 +1,64 @@
+# ============================================================
+# Cloudflare Pages — Cache & Security Headers
+# Mentoria ROUTE · larissasayuri.com
+# ============================================================
+
+# ─────────────────────────────────────────────
+# FONTES (.woff2) — imutáveis, cache de 1 ano
+# Fontes têm fingerprint no nome (v17, v21), então podem cachear forever
+# ─────────────────────────────────────────────
+/images/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# ─────────────────────────────────────────────
+# IMAGENS — cache longo de 1 ano
+# ─────────────────────────────────────────────
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─────────────────────────────────────────────
+# OG IMAGE — cache curto (pra atualizar fácil se trocar)
+# ─────────────────────────────────────────────
+/og-image.jpg
+  Cache-Control: public, max-age=86400
+
+# ─────────────────────────────────────────────
+# HTML — sem cache agressivo
+# Permite atualizar conteúdo sem aguardar TTL longo
+# ─────────────────────────────────────────────
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ─────────────────────────────────────────────
+# SEGURANÇA — aplica a tudo
+# Ganha pontos em Best Practices do Lighthouse
+# ─────────────────────────────────────────────
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
