@@ -50,12 +50,8 @@
 <!-- Favicon SVG inline (zero request) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060C18'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-style='italic' font-weight='300' fill='%23C9A84C' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 
-<!-- Preconnect fonts (mantemos Google Fonts mas otimizado) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;500&display=swap"></noscript>
+<!-- Fonts locais (auto-hospedadas — zero requests externos, sem CLS) -->
+<link rel="preload" as="font" type="font/woff2" href="images/fonts/cormorant-garamond-v21-latin_latin-ext-300italic.woff2" crossorigin>
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
@@ -87,6 +83,58 @@
 </script>
 
 <style>
+  /* ===== Fonts auto-hospedadas (woff2 local, latin + latin-ext) ===== */
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('images/fonts/cormorant-garamond-v21-latin_latin-ext-300.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('images/fonts/cormorant-garamond-v21-latin_latin-ext-300italic.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('images/fonts/dm-sans-v17-latin_latin-ext-300.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('images/fonts/dm-sans-v17-latin_latin-ext-500.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  /* ===== Fallback fonts com size-adjust para eliminar CLS ===== */
+  @font-face {
+    font-family: 'Cormorant Fallback';
+    src: local('Times New Roman'), local('Times');
+    size-adjust: 109%;
+    ascent-override: 90%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+  }
+  @font-face {
+    font-family: 'DM Sans Fallback';
+    src: local('Arial');
+    size-adjust: 98%;
+    ascent-override: 95%;
+    descent-override: 25%;
+    line-gap-override: 0%;
+  }
+
   /* ============ DESIGN TOKENS ============ */
   :root {
     --navy: #0B1120;
@@ -107,8 +155,8 @@
     --border-subtle: rgba(255,255,255,0.06);
     --border-blue: rgba(26,127,212,0.20);
 
-    --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
-    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --serif: 'Cormorant Garamond', 'Cormorant Fallback', 'Times New Roman', Georgia, serif;
+    --sans: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -234,7 +282,6 @@
     letter-spacing: 1.5px;
     padding: 6px 10px;
     color: var(--slate);
-    transition: color 0.25s var(--ease-out), background 0.25s var(--ease-out);
     line-height: 1;
   }
   .lang-btn:hover { color: var(--off-white); }
@@ -836,7 +883,6 @@
     color: var(--slate);
     margin-top: 20px;
     font-style: italic;
-    opacity: 0.7;
   }
 
   /* ============ QUEM ============ */
@@ -1587,7 +1633,6 @@
   .cta-note {
     font-size: 11px;
     color: var(--slate);
-    opacity: 0.7;
     letter-spacing: 1px;
     margin-top: 28px;
     position: relative;
@@ -1601,8 +1646,7 @@
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--slate);
-    opacity: 0.6;
+    color: var(--slate-strong);
     position: relative;
   }
   .cta-trust span { display: flex; align-items: center; gap: 8px; }
@@ -1645,8 +1689,7 @@
     font-family: var(--serif);
     font-style: italic;
     font-size: 12px;
-    color: var(--slate);
-    opacity: 0.7;
+    color: var(--slate-strong);
   }
   .footer-ig-main {
     display: inline-flex;
@@ -1678,15 +1721,13 @@
     font-size: 11px;
   }
   .footer-copyright {
-    color: var(--slate);
-    opacity: 0.65;
+    color: var(--slate-strong);
     letter-spacing: 0.3px;
   }
   .footer-tagline-center {
     font-family: var(--serif);
     font-style: italic;
     color: var(--slate-strong);
-    opacity: 0.7;
     text-align: center;
     font-size: 12px;
   }
@@ -1700,11 +1741,10 @@
     font-family: var(--sans);
     font-size: 10px;
     letter-spacing: 0.5px;
-    color: var(--slate);
-    opacity: 0.7;
-    transition: opacity 0.3s var(--ease-out);
+    color: var(--slate-strong);
+    transition: color 0.3s var(--ease-out);
   }
-  .footer-signature:hover { opacity: 1; }
+  .footer-signature:hover { color: var(--gold-light); }
   .footer-signature-label {
     font-weight: 400;
   }
@@ -1978,6 +2018,8 @@
   </div>
 </header>
 
+<main id="main-content">
+
 <!-- ============ PROBLEMA ============ -->
 <section class="problema" id="problema" aria-labelledby="problema-title">
   <div class="container">
@@ -2134,7 +2176,7 @@
           <span class="photo-corner br" aria-hidden="true"></span>
           <picture>
             <source srcset="images/larissa-sayuri.webp" type="image/webp">
-            <img src="images/larissa-sayuri.png" alt="Larissa Sayuri" class="photo-img" loading="lazy" decoding="async">
+            <img src="images/larissa-sayuri.png" alt="Larissa Sayuri" class="photo-img" width="505" height="656" loading="lazy" decoding="async">
           </picture>
         </div>
       </div>
@@ -2573,6 +2615,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="footer-grid">
@@ -2746,6 +2790,20 @@
   var formSection = document.getElementById('formulario');
   var ticking = false;
 
+  // Cache de offsets (recalculados só em resize/load) para evitar reflow forçado a cada scroll
+  var cachedHeroBottom = 0;
+  var cachedFormTop = 0;
+  function recalcOffsets(){
+    if (hero) cachedHeroBottom = hero.offsetTop + hero.offsetHeight;
+    if (formSection) cachedFormTop = formSection.offsetTop - 100;
+  }
+  // Calcular após o load (quando fonts/imagens estão dimensionadas) e em resize
+  window.addEventListener('load', recalcOffsets);
+  window.addEventListener('resize', recalcOffsets, { passive: true });
+  // Primeira chamada imediata (best-effort, será recalculada após load)
+  if (document.readyState === 'complete') recalcOffsets();
+  else recalcOffsets();
+
   function onScroll(){
     if (ticking) return;
     ticking = true;
@@ -2753,10 +2811,8 @@
       var y = window.scrollY || window.pageYOffset;
       if (y > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
       if (hero && sticky && formSection) {
-        var heroBottom = hero.offsetTop + hero.offsetHeight;
-        var formTop = formSection.offsetTop - 100;
-        var inFormZone = y >= formTop;
-        var shouldShow = y > heroBottom - 200 && !inFormZone;
+        var inFormZone = y >= cachedFormTop;
+        var shouldShow = y > cachedHeroBottom - 200 && !inFormZone;
         sticky.classList.toggle('show', shouldShow);
       }
       ticking = false;
